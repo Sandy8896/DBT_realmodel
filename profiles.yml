@@ -1,24 +1,18 @@
-# ──────────────────────────────────────────────────────────────
-# profiles.yml  →  place this at  ~/.dbt/profiles.yml
-# Using DuckDB so you need ZERO external database setup.
-#
-# Install adapter:  pip install dbt-duckdb
-# ──────────────────────────────────────────────────────────────
 dbt_learning_project:
+
   target: dev
+
   outputs:
     dev:
-      type: duckdb
-      path: "dbt_learning.duckdb"   # created in project root
-      threads: 4
+      type: snowflake
+      account: HBIUHMK-FG29063
 
-    # Swap to postgres when ready:
-    # prod:
-    #   type: postgres
-    #   host: localhost
-    #   user: "{{ env_var('DB_USER') }}"
-    #   password: "{{ env_var('DB_PASS') }}"
-    #   port: 5432
-    #   dbname: analytics
-    #   schema: public
-    #   threads: 8
+      user: Santhosh
+      password: Sandy@889677
+
+      role: ACCOUNTADMIN
+      database: DBT_TEST
+      warehouse: COMPUTE_WH
+      schema: RAW
+
+      threads: 4

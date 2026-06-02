@@ -33,7 +33,7 @@ with orders as (
         -- Only reprocess dates that have new/changed orders
         -- (look back 3 days to catch late-arriving records)
         where order_date >= (
-            select max(order_date) - interval '3 days' from {{ this }}
+            select dateadd(day, -3, max(order_date)) from {{ this }}
         )
     {% endif %}
 
