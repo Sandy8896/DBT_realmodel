@@ -18,10 +18,9 @@
 
 {{
   config(
-    materialized         = 'incremental',
-    unique_key           = 'order_date',
-    incremental_strategy = 'delete+insert',   -- replaces stale date partitions
-    tags                 = ['marts', 'incremental', 'daily']
+    materialized = 'incremental',
+    unique_key = 'event_id',
+    tags = ['marts', 'incremental']
   )
 }}
 
