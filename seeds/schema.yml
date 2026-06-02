@@ -1,0 +1,37 @@
+version: 2
+
+seeds:
+  - name: raw_customers
+    description: "Raw customer dump loaded from CSV seed."
+    columns:
+      - name: customer_id
+        description: "Primary key"
+        tests:
+          - unique
+          - not_null
+      - name: email
+        tests:
+          - unique
+          - not_null
+      - name: country
+        tests:
+          - accepted_values:
+              values: ['US', 'UK', 'IN', 'DE', 'AU', 'CA']
+
+  - name: raw_orders
+    description: "Raw orders from the transactional system."
+    columns:
+      - name: order_id
+        tests: [unique, not_null]
+      - name: customer_id
+        tests: [not_null]
+      - name: status
+        tests:
+          - accepted_values:
+              values: ['completed', 'pending', 'cancelled', 'returned']
+
+  - name: raw_events
+    description: "Clickstream events."
+    columns:
+      - name: event_id
+        tests: [unique, not_null]

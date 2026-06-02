@@ -1,0 +1,7 @@
+customer_id,first_name,last_name,email,country,signup_date,updated_at
+1,Alice,Johnson,alice@example.com,US,2022-01-15,2024-01-01
+2,Bob,Smith,bob@example.com,UK,2022-03-20,2024-01-05
+3,Carol,Lee,carol@example.com,IN,2022-06-10,2024-02-10
+4,David,Kim,david@example.com,US,2023-01-01,2024-03-15
+5,Eva,Patel,eva@example.com,IN,2023-07-22,2024-04-01
+6,Frank,Müller,frank@example.com,DE,2023-09-05,2024-05-20

@@ -1,0 +1,54 @@
+name: 'dbt_learning_project'
+version: '1.0.0'
+config-version: 2
+
+# ──────────────────────────────────────────────
+# Profile (maps to ~/.dbt/profiles.yml)
+# ──────────────────────────────────────────────
+profile: 'dbt_learning_project'
+
+# ──────────────────────────────────────────────
+# Directory paths (dbt defaults shown)
+# ──────────────────────────────────────────────
+model-paths:    ["models"]
+seed-paths:     ["seeds"]
+test-paths:     ["tests"]
+macro-paths:    ["macros"]
+snapshot-paths: ["snapshots"]
+analysis-paths: ["analyses"]
+docs-paths:     ["docs"]
+
+# ──────────────────────────────────────────────
+# Model-level default config
+# ──────────────────────────────────────────────
+models:
+  dbt_learning_project:
+
+    # ── staging layer: views (cheap, always fresh) ──
+    staging:
+      +materialized: view
+      +schema: staging
+
+    # ── intermediate: ephemeral (no physical object) ──
+    intermediate:
+      +materialized: ephemeral
+
+    # ── marts: each model sets its own materialization ──
+    marts:
+      +schema: marts
+
+# ──────────────────────────────────────────────
+# Seed config
+# ──────────────────────────────────────────────
+seeds:
+  dbt_learning_project:
+    +schema: raw
+
+# ──────────────────────────────────────────────
+# Snapshot config
+# ──────────────────────────────────────────────
+snapshots:
+  dbt_learning_project:
+    +target_schema: snapshots
+    +strategy: timestamp
+    +updated_at: updated_at

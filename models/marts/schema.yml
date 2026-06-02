@@ -1,0 +1,47 @@
+version: 2
+
+models:
+
+  - name: dim_customers
+    description: >
+      Customer dimension enriched with lifetime order stats.
+      Materialized as TABLE for fast BI queries.
+    columns:
+      - name: customer_sk
+        description: "Surrogate key (hashed)."
+        tests: [unique, not_null]
+      - name: customer_id
+        tests: [unique, not_null]
+      - name: segment
+        tests:
+          - accepted_values:
+              values: ['VIP', 'Regular', 'At-Risk', 'New']
+
+  - name: fct_orders
+    description: "Order fact table joined to customer dimension."
+    columns:
+      - name: order_id
+        tests: [unique, not_null]
+      - name: customer_id
+        tests:
+          - not_null
+          - relationships:
+              to: ref('dim_customers')
+              field: customer_id
+
+  - name: fct_events_incremental
+    description: >
+      Clickstream events loaded incrementally (append strategy).
+      Only new rows since the last max(event_ts) are processed.
+    columns:
+      - name: event_id
+        tests: [unique, not_null]
+
+  - name: fct_daily_revenue_incremental
+    description: >
+      Daily revenue rolled up from orders.
+      Uses delete+insert incremental strategy to re-process
+      the last 3 days on every run (handles late arrivals).
+    columns:
+      - name: order_date
+        tests: [unique, not_null]
