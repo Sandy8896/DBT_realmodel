@@ -1,5 +1,5 @@
 order_id,customer_id,order_date,status,amount,updated_at
-1001,1,2024-01-10,completed,250.00,2024-01-12
+1001,1,2024-01-10,completed,950.00,2024-01-12
 1002,2,2024-01-15,completed,89.99,2024-01-17
 1003,3,2024-02-01,pending,430.50,2024-02-01
 1004,1,2024-02-20,completed,110.00,2024-02-22
