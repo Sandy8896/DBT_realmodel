@@ -1819,3 +1819,307 @@ parsing.
 [0m12:11:42.446175 [debug] [Dummy-1   ]: Resource report: {"command_name": "run", "command_success": true, "command_wall_clock_time": 1.0676816, "process_in_blocks": "0", "process_kernel_time": 0.71, "process_mem_max_rss": "364668", "process_out_blocks": "0", "process_user_time": 4.19}
 [0m12:11:42.446816 [debug] [Dummy-1   ]: Command `cli run` succeeded at 12:11:42.446557 after 1.07 seconds
 [0m12:11:42.447399 [debug] [Dummy-1   ]: Flushing usage events
+
+
+============================== 12:12:49.314341 | 1d5fad55-cf95-4d3c-92a9-eca45253eea1 ==============================
+[0m12:12:49.314341 [info ] [Dummy-1   ]: Running with dbt=1.10.15
+[0m12:12:49.315110 [debug] [Dummy-1   ]: running dbt with arguments {'send_anonymous_usage_stats': 'False', 'profiles_dir': '/tmp/dbt/', 'warn_error': 'None', 'partial_parse': 'True', 'no_print': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'log_path': '/tmp/dbt/logs', 'use_colors': 'True', 'introspect': 'True', 'printer_width': '80', 'write_json': 'True', 'use_experimental_parser': 'False', 'cache_selected_only': 'False', 'static_parser': 'True', 'indirect_selection': 'eager', 'quiet': 'False', 'log_cache_events': 'False', 'debug': 'False', 'invocation_command': 'dbt ', 'empty': 'False', 'target_path': '/tmp/dbt/target/', 'version_check': 'True', 'fail_fast': 'False', 'log_format': 'default'}
+[0m12:12:49.555235 [info ] [Dummy-1   ]: Registered adapter: snowflake=1.10.3
+[0m12:12:49.827951 [debug] [Dummy-1   ]: checksum: 0f45fdd67cc51382d6521f874e757e7afa214ac7bb0178b13f1819cbe813499c, vars: {}, profile: , target: dev, version: 1.10.15
+[0m12:12:50.028847 [debug] [Dummy-1   ]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m12:12:50.029396 [debug] [Dummy-1   ]: Partial parsing enabled, no changes found, skipping parsing
+[0m12:12:50.241837 [debug] [Dummy-1   ]: Wrote artifact WritableManifest to /tmp/dbt/target/manifest.json
+[0m12:12:50.243898 [debug] [Dummy-1   ]: Wrote artifact SemanticManifest to /tmp/dbt/target/semantic_manifest.json
+[0m12:12:50.286600 [info ] [Dummy-1   ]: Found 8 models, 2 snapshots, 1 analysis, 39 data tests, 3 seeds, 489 macros
+[0m12:12:50.289705 [warn ] [Dummy-1   ]: Nothing to do. Try checking your model configs and model specification args
+[0m12:12:50.291746 [debug] [Dummy-1   ]: Command end result
+[0m12:12:50.321767 [debug] [Dummy-1   ]: Wrote artifact WritableManifest to /tmp/dbt/target/manifest.json
+[0m12:12:50.323515 [debug] [Dummy-1   ]: Wrote artifact SemanticManifest to /tmp/dbt/target/semantic_manifest.json
+[0m12:12:50.326736 [debug] [Dummy-1   ]: Wrote artifact RunExecutionResult to /tmp/dbt/target/run_results.json
+[0m12:12:50.328167 [debug] [Dummy-1   ]: Resource report: {"command_name": "run", "command_success": true, "command_wall_clock_time": 1.0697867, "process_in_blocks": "0", "process_kernel_time": 0.87, "process_mem_max_rss": "359124", "process_out_blocks": "0", "process_user_time": 3.99}
+[0m12:12:50.328864 [debug] [Dummy-1   ]: Command `cli run` succeeded at 12:12:50.328603 after 1.07 seconds
+[0m12:12:50.329411 [debug] [Dummy-1   ]: Flushing usage events
+
+
+============================== 12:19:23.001659 | 15e81d19-c548-41d7-b62d-a0d48338bfb4 ==============================
+[0m12:19:23.001659 [info ] [Dummy-1   ]: Running with dbt=1.10.15
+[0m12:19:23.002432 [debug] [Dummy-1   ]: running dbt with arguments {'introspect': 'True', 'target_path': '/tmp/dbt/target/', 'profiles_dir': '/tmp/dbt/', 'debug': 'False', 'empty': 'False', 'send_anonymous_usage_stats': 'False', 'printer_width': '80', 'no_print': 'None', 'cache_selected_only': 'False', 'indirect_selection': 'eager', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'write_json': 'True', 'log_format': 'default', 'quiet': 'False', 'invocation_command': 'dbt ', 'partial_parse': 'True', 'use_colors': 'True', 'static_parser': 'True', 'log_cache_events': 'False', 'use_experimental_parser': 'False', 'warn_error': 'None', 'version_check': 'True', 'fail_fast': 'False', 'log_path': '/tmp/dbt/logs'}
+[0m12:19:23.241205 [info ] [Dummy-1   ]: Registered adapter: snowflake=1.10.3
+[0m12:19:23.510460 [debug] [Dummy-1   ]: checksum: 0f45fdd67cc51382d6521f874e757e7afa214ac7bb0178b13f1819cbe813499c, vars: {}, profile: , target: dev, version: 1.10.15
+[0m12:19:23.708675 [debug] [Dummy-1   ]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m12:19:23.709238 [debug] [Dummy-1   ]: Partial parsing enabled, no changes found, skipping parsing
+[0m12:19:23.921075 [debug] [Dummy-1   ]: Wrote artifact WritableManifest to /tmp/dbt/target/manifest.json
+[0m12:19:23.922992 [debug] [Dummy-1   ]: Wrote artifact SemanticManifest to /tmp/dbt/target/semantic_manifest.json
+[0m12:19:23.965721 [info ] [Dummy-1   ]: Found 8 models, 2 snapshots, 1 analysis, 39 data tests, 3 seeds, 489 macros
+[0m12:19:23.968532 [info ] [Dummy-1   ]: 
+[0m12:19:23.969016 [info ] [Dummy-1   ]: Concurrency: 4 threads (target='dev')
+[0m12:19:23.969438 [info ] [Dummy-1   ]: 
+[0m12:19:23.970130 [debug] [Dummy-1   ]: Acquiring new snowflake connection 'master'
+[0m12:19:23.975231 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_DBT_TEST'
+[0m12:19:24.055160 [debug] [ThreadPool]: Using snowflake connection "list_DBT_TEST"
+[0m12:19:24.055663 [debug] [ThreadPool]: On list_DBT_TEST: show terse schemas in database DBT_TEST
+    limit 10000
+/* {"app": "dbt", "dbt_version": "1.10.15", "profile_name": "dbt_learning_project", "target_name": "dev", "connection_name": "list_DBT_TEST"} */
+[0m12:19:24.056119 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m12:19:24.343349 [debug] [ThreadPool]: SQL status: SUCCESS 6 in 0.287 seconds
+[0m12:19:24.345427 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_DBT_TEST, now create_DBT_TEST_snapshots)
+[0m12:19:24.346075 [debug] [ThreadPool]: Creating schema "database: "DBT_TEST"
+schema: "snapshots"
+"
+[0m12:19:24.412870 [debug] [ThreadPool]: Using snowflake connection "create_DBT_TEST_snapshots"
+[0m12:19:24.413438 [debug] [ThreadPool]: On create_DBT_TEST_snapshots: create schema if not exists DBT_TEST.snapshots
+/* {"app": "dbt", "dbt_version": "1.10.15", "profile_name": "dbt_learning_project", "target_name": "dev", "connection_name": "create_DBT_TEST_snapshots"} */
+[0m12:19:24.413913 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m12:19:24.689062 [debug] [ThreadPool]: SQL status: SUCCESS 1 in 0.275 seconds
+[0m12:19:24.692483 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_DBT_TEST_staging'
+[0m12:19:24.693454 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly create_DBT_TEST_snapshots, now list_DBT_TEST_marts)
+[0m12:19:24.694478 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_DBT_TEST_snapshots'
+[0m12:19:24.701094 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_DBT_TEST_raw'
+[0m12:19:24.709578 [debug] [ThreadPool]: Using snowflake connection "list_DBT_TEST_staging"
+[0m12:19:24.713168 [debug] [ThreadPool]: Using snowflake connection "list_DBT_TEST_marts"
+[0m12:19:24.716475 [debug] [ThreadPool]: Using snowflake connection "list_DBT_TEST_snapshots"
+[0m12:19:24.721033 [debug] [ThreadPool]: Using snowflake connection "list_DBT_TEST_raw"
+[0m12:19:24.721554 [debug] [ThreadPool]: On list_DBT_TEST_staging: show objects in DBT_TEST.staging
+    limit 10000
+    
+
+/* {"app": "dbt", "dbt_version": "1.10.15", "profile_name": "dbt_learning_project", "target_name": "dev", "connection_name": "list_DBT_TEST_staging"} */;
+[0m12:19:24.722029 [debug] [ThreadPool]: On list_DBT_TEST_marts: show objects in DBT_TEST.marts
+    limit 10000
+    
+
+/* {"app": "dbt", "dbt_version": "1.10.15", "profile_name": "dbt_learning_project", "target_name": "dev", "connection_name": "list_DBT_TEST_marts"} */;
+[0m12:19:24.722492 [debug] [ThreadPool]: On list_DBT_TEST_snapshots: show objects in DBT_TEST.snapshots
+    limit 10000
+    
+
+/* {"app": "dbt", "dbt_version": "1.10.15", "profile_name": "dbt_learning_project", "target_name": "dev", "connection_name": "list_DBT_TEST_snapshots"} */;
+[0m12:19:24.722938 [debug] [ThreadPool]: On list_DBT_TEST_raw: show objects in DBT_TEST.raw
+    limit 10000
+    
+
+/* {"app": "dbt", "dbt_version": "1.10.15", "profile_name": "dbt_learning_project", "target_name": "dev", "connection_name": "list_DBT_TEST_raw"} */;
+[0m12:19:24.723374 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m12:19:24.723816 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m12:19:24.724237 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m12:19:24.724648 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m12:19:25.018119 [debug] [ThreadPool]: SQL status: SUCCESS 0 in 0.294 seconds
+[0m12:19:25.024711 [debug] [ThreadPool]: SQL status: SUCCESS 3 in 0.301 seconds
+[0m12:19:25.028189 [debug] [ThreadPool]: SQL status: SUCCESS 4 in 0.304 seconds
+[0m12:19:25.029099 [debug] [ThreadPool]: SQL status: SUCCESS 8 in 0.304 seconds
+[0m12:19:25.041608 [debug] [Thread-2 (]: Began running node snapshot.dbt_learning_project.snap_customers
+[0m12:19:25.042211 [debug] [Thread-3 (]: Began running node snapshot.dbt_learning_project.snap_orders
+[0m12:19:25.042936 [info ] [Thread-2 (]: 1 of 2 START snapshot snapshots.snap_customers ................................. [RUN]
+[0m12:19:25.043633 [info ] [Thread-3 (]: 2 of 2 START snapshot snapshots.snap_orders .................................... [RUN]
+[0m12:19:25.044283 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly list_DBT_TEST_staging, now snapshot.dbt_learning_project.snap_customers)
+[0m12:19:25.044816 [debug] [Thread-3 (]: Re-using an available connection from the pool (formerly list_DBT_TEST_raw, now snapshot.dbt_learning_project.snap_orders)
+[0m12:19:25.045366 [debug] [Thread-2 (]: Began compiling node snapshot.dbt_learning_project.snap_customers
+[0m12:19:25.045910 [debug] [Thread-3 (]: Began compiling node snapshot.dbt_learning_project.snap_orders
+[0m12:19:25.055121 [debug] [Thread-2 (]: Began executing node snapshot.dbt_learning_project.snap_customers
+[0m12:19:25.059673 [debug] [Thread-3 (]: Began executing node snapshot.dbt_learning_project.snap_orders
+[0m12:19:25.183912 [debug] [Thread-3 (]: Using snowflake connection "snapshot.dbt_learning_project.snap_orders"
+[0m12:19:25.186600 [debug] [Thread-2 (]: Using snowflake connection "snapshot.dbt_learning_project.snap_customers"
+[0m12:19:25.187171 [debug] [Thread-3 (]: On snapshot.dbt_learning_project.snap_orders: select * from (
+        
+    
+
+    select *,
+        md5(coalesce(cast(order_id as varchar ), '')
+         || '|' || coalesce(cast(updated_at as varchar ), '')
+        ) as dbt_scd_id,
+        updated_at as dbt_updated_at,
+        updated_at as dbt_valid_from,
+        
+  
+  coalesce(nullif(updated_at, updated_at), null)
+  as dbt_valid_to
+from (
+        
+
+
+
+select
+    order_id,
+    customer_id,
+    order_date,
+    status,
+    amount,
+    updated_at
+from DBT_TEST.raw.raw_orders
+
+    ) sbq
+
+
+
+    ) as __dbt_sbq
+    where false
+    limit 0
+/* {"app": "dbt", "dbt_version": "1.10.15", "profile_name": "dbt_learning_project", "target_name": "dev", "node_id": "snapshot.dbt_learning_project.snap_orders"} */
+/* {"app": "dbt", "dbt_version": "1.10.15", "profile_name": "dbt_learning_project", "target_name": "dev", "node_id": "snapshot.dbt_learning_project.snap_orders"} */
+[0m12:19:25.187767 [debug] [Thread-2 (]: On snapshot.dbt_learning_project.snap_customers: select * from (
+        
+    
+
+    select *,
+        md5(coalesce(cast(customer_id as varchar ), '')
+         || '|' || coalesce(cast(updated_at as varchar ), '')
+        ) as dbt_scd_id,
+        updated_at as dbt_updated_at,
+        updated_at as dbt_valid_from,
+        
+  
+  coalesce(nullif(updated_at, updated_at), null)
+  as dbt_valid_to
+from (
+        
+
+
+
+select
+    customer_id,
+    first_name,
+    last_name,
+    email,
+    country,
+    signup_date,
+    updated_at
+from DBT_TEST.raw.raw_customers
+
+    ) sbq
+
+
+
+    ) as __dbt_sbq
+    where false
+    limit 0
+/* {"app": "dbt", "dbt_version": "1.10.15", "profile_name": "dbt_learning_project", "target_name": "dev", "node_id": "snapshot.dbt_learning_project.snap_customers"} */
+/* {"app": "dbt", "dbt_version": "1.10.15", "profile_name": "dbt_learning_project", "target_name": "dev", "node_id": "snapshot.dbt_learning_project.snap_customers"} */
+[0m12:19:25.188387 [debug] [Thread-3 (]: Opening a new connection, currently in state init
+[0m12:19:25.188850 [debug] [Thread-2 (]: Opening a new connection, currently in state init
+[0m12:19:25.612916 [debug] [Thread-3 (]: SQL status: SUCCESS 0 in 0.424 seconds
+[0m12:19:25.619270 [debug] [Thread-3 (]: Using snowflake connection "snapshot.dbt_learning_project.snap_orders"
+[0m12:19:25.619811 [debug] [Thread-3 (]: On snapshot.dbt_learning_project.snap_orders: select * from (
+        select to_timestamp_ntz(convert_timezone('UTC', current_timestamp())) as dbt_snapshot_time
+    ) as __dbt_sbq
+    where false
+    limit 0
+/* {"app": "dbt", "dbt_version": "1.10.15", "profile_name": "dbt_learning_project", "target_name": "dev", "node_id": "snapshot.dbt_learning_project.snap_orders"} */
+/* {"app": "dbt", "dbt_version": "1.10.15", "profile_name": "dbt_learning_project", "target_name": "dev", "node_id": "snapshot.dbt_learning_project.snap_orders"} */
+[0m12:19:25.655777 [debug] [Thread-3 (]: SQL status: SUCCESS 0 in 0.035 seconds
+[0m12:19:25.656423 [warn ] [Thread-3 (]: Data type of snapshot table timestamp columns (TIMESTAMP_NTZ) doesn't match derived column 'updated_at' (DATE). Please update snapshot config 'updated_at'.
+[0m12:19:25.657138 [debug] [Thread-3 (]: Writing runtime sql for node "snapshot.dbt_learning_project.snap_orders"
+[0m12:19:25.658581 [debug] [Thread-3 (]: Using snowflake connection "snapshot.dbt_learning_project.snap_orders"
+[0m12:19:25.659109 [debug] [Thread-3 (]: On snapshot.dbt_learning_project.snap_orders: create or replace transient table DBT_TEST.snapshots.snap_orders
+    
+    
+    
+    as (
+    
+
+    select *,
+        md5(coalesce(cast(order_id as varchar ), '')
+         || '|' || coalesce(cast(updated_at as varchar ), '')
+        ) as dbt_scd_id,
+        updated_at as dbt_updated_at,
+        updated_at as dbt_valid_from,
+        
+  
+  coalesce(nullif(updated_at, updated_at), null)
+  as dbt_valid_to
+from (
+        
+
+
+
+select
+    order_id,
+    customer_id,
+    order_date,
+    status,
+    amount,
+    updated_at
+from DBT_TEST.raw.raw_orders
+
+    ) sbq
+
+
+
+    )
+
+/* {"app": "dbt", "dbt_version": "1.10.15", "profile_name": "dbt_learning_project", "target_name": "dev", "node_id": "snapshot.dbt_learning_project.snap_orders"} */;
+[0m12:19:25.711603 [debug] [Thread-2 (]: SQL status: SUCCESS 0 in 0.523 seconds
+[0m12:19:25.712849 [debug] [Thread-2 (]: Using snowflake connection "snapshot.dbt_learning_project.snap_customers"
+[0m12:19:25.713345 [debug] [Thread-2 (]: On snapshot.dbt_learning_project.snap_customers: select * from (
+        select to_timestamp_ntz(convert_timezone('UTC', current_timestamp())) as dbt_snapshot_time
+    ) as __dbt_sbq
+    where false
+    limit 0
+/* {"app": "dbt", "dbt_version": "1.10.15", "profile_name": "dbt_learning_project", "target_name": "dev", "node_id": "snapshot.dbt_learning_project.snap_customers"} */
+/* {"app": "dbt", "dbt_version": "1.10.15", "profile_name": "dbt_learning_project", "target_name": "dev", "node_id": "snapshot.dbt_learning_project.snap_customers"} */
+[0m12:19:25.748388 [debug] [Thread-2 (]: SQL status: SUCCESS 0 in 0.034 seconds
+[0m12:19:25.748992 [warn ] [Thread-2 (]: Data type of snapshot table timestamp columns (TIMESTAMP_NTZ) doesn't match derived column 'updated_at' (DATE). Please update snapshot config 'updated_at'.
+[0m12:19:25.749699 [debug] [Thread-2 (]: Writing runtime sql for node "snapshot.dbt_learning_project.snap_customers"
+[0m12:19:25.751057 [debug] [Thread-2 (]: Using snowflake connection "snapshot.dbt_learning_project.snap_customers"
+[0m12:19:25.751609 [debug] [Thread-2 (]: On snapshot.dbt_learning_project.snap_customers: create or replace transient table DBT_TEST.snapshots.snap_customers
+    
+    
+    
+    as (
+    
+
+    select *,
+        md5(coalesce(cast(customer_id as varchar ), '')
+         || '|' || coalesce(cast(updated_at as varchar ), '')
+        ) as dbt_scd_id,
+        updated_at as dbt_updated_at,
+        updated_at as dbt_valid_from,
+        
+  
+  coalesce(nullif(updated_at, updated_at), null)
+  as dbt_valid_to
+from (
+        
+
+
+
+select
+    customer_id,
+    first_name,
+    last_name,
+    email,
+    country,
+    signup_date,
+    updated_at
+from DBT_TEST.raw.raw_customers
+
+    ) sbq
+
+
+
+    )
+
+/* {"app": "dbt", "dbt_version": "1.10.15", "profile_name": "dbt_learning_project", "target_name": "dev", "node_id": "snapshot.dbt_learning_project.snap_customers"} */;
+[0m12:19:26.075709 [debug] [Thread-3 (]: SQL status: SUCCESS 1 in 0.416 seconds
+[0m12:19:26.102106 [info ] [Thread-3 (]: 2 of 2 OK snapshotted snapshots.snap_orders .................................... [[32mSUCCESS 1[0m in 1.06s]
+[0m12:19:26.102886 [debug] [Thread-3 (]: Finished running node snapshot.dbt_learning_project.snap_orders
+[0m12:19:26.144222 [debug] [Thread-2 (]: SQL status: SUCCESS 1 in 0.392 seconds
+[0m12:19:26.146832 [info ] [Thread-2 (]: 1 of 2 OK snapshotted snapshots.snap_customers ................................. [[32mSUCCESS 1[0m in 1.10s]
+[0m12:19:26.147560 [debug] [Thread-2 (]: Finished running node snapshot.dbt_learning_project.snap_customers
+[0m12:19:26.150261 [debug] [Dummy-1   ]: Connection 'master' was properly closed.
+[0m12:19:26.150809 [debug] [Dummy-1   ]: Connection 'list_DBT_TEST_marts' was properly closed.
+[0m12:19:26.151208 [debug] [Dummy-1   ]: Connection 'snapshot.dbt_learning_project.snap_customers' was properly closed.
+[0m12:19:26.151592 [debug] [Dummy-1   ]: Connection 'list_DBT_TEST_snapshots' was properly closed.
+[0m12:19:26.151980 [debug] [Dummy-1   ]: Connection 'snapshot.dbt_learning_project.snap_orders' was properly closed.
+[0m12:19:26.152501 [info ] [Dummy-1   ]: 
+[0m12:19:26.152942 [info ] [Dummy-1   ]: Finished running 2 snapshots in 0 hours 0 minutes and 2.18 seconds (2.18s).
+[0m12:19:26.153804 [debug] [Dummy-1   ]: Command end result
+[0m12:19:26.185179 [debug] [Dummy-1   ]: Wrote artifact WritableManifest to /tmp/dbt/target/manifest.json
+[0m12:19:26.186875 [debug] [Dummy-1   ]: Wrote artifact SemanticManifest to /tmp/dbt/target/semantic_manifest.json
+[0m12:19:26.192815 [debug] [Dummy-1   ]: Wrote artifact RunExecutionResult to /tmp/dbt/target/run_results.json
+[0m12:19:26.193258 [info ] [Dummy-1   ]: 
+[0m12:19:26.193860 [info ] [Dummy-1   ]: [32mCompleted successfully[0m
+[0m12:19:26.194300 [info ] [Dummy-1   ]: 
+[0m12:19:26.194764 [info ] [Dummy-1   ]: Done. PASS=2 WARN=0 ERROR=0 SKIP=0 NO-OP=0 TOTAL=2
+[0m12:19:26.196119 [debug] [Dummy-1   ]: Resource report: {"command_name": "snapshot", "command_success": true, "command_wall_clock_time": 3.2500186, "process_in_blocks": "0", "process_kernel_time": 0.86, "process_mem_max_rss": "413176", "process_out_blocks": "0", "process_user_time": 4.43}
+[0m12:19:26.196710 [debug] [Dummy-1   ]: Command `cli snapshot` succeeded at 12:19:26.196476 after 3.25 seconds
+[0m12:19:26.197179 [debug] [Dummy-1   ]: Flushing usage events
