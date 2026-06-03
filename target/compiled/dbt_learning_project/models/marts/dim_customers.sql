@@ -12,18 +12,6 @@
 
 
 with  __dbt__cte__int_customer_order_stats as (
--- ============================================================
--- MATERIALIZATION: EPHEMERAL
---
--- WHY:  Ephemeral models are NOT materialized in the DB at all.
---       dbt inlines them as a CTE wherever they are ref()-ed.
---       Perfect for intermediate transformation logic you want
---       to reuse WITHOUT creating an extra table/view.
---
--- HOW:  Any model that calls  ref('int_customer_order_stats')
---       gets this SQL inlined as a CTE — invisible to the DB.
--- ============================================================
-
 
 
 with orders as (
@@ -36,16 +24,17 @@ agg as (
 
     select
         customer_id,
-        count(*)                                         as total_orders,
-        sum(amount)                                      as total_spend,
-        avg(amount)                                      as avg_order_value,
-        min(order_date)                                  as first_order_date,
-        max(order_date)                                  as last_order_date,
-        count(*) filter (where status = 'completed')    as completed_orders,
-        count(*) filter (where status = 'cancelled')    as cancelled_orders,
+        count(*)                                          as total_orders,
+        sum(amount)                                       as total_spend,
+        avg(amount)                                       as avg_order_value,
+        min(order_date)                                   as first_order_date,
+        max(order_date)                                   as last_order_date,
 
-        -- Days between first and last order (customer tenure)
-        (max(order_date) - min(order_date))              as days_active
+        -- Snowflake-compatible syntax (no FILTER keyword)
+        sum(case when status = 'completed' then 1 else 0 end) as completed_orders,
+        sum(case when status = 'cancelled' then 1 else 0 end) as cancelled_orders,
+
+        datediff('day', min(order_date), max(order_date)) as days_active
 
     from orders
     group by 1
@@ -97,7 +86,7 @@ final as (
  as segment,
 
         -- Metadata
-        current_timestamp                           as dbt_updated_at
+        current_timestamp()                           as dbt_updated_at
 
     from customers c
     left join order_stats o using (customer_id)

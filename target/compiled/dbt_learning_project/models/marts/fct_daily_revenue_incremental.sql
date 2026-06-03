@@ -7,6 +7,14 @@ with orders as (
 
     
 
+        -- Reprocess the last 3 days to capture late-arriving updates
+        where order_date >= (
+            select dateadd(day, -3, max(order_date))
+            from DBT_TEST.marts.fct_daily_revenue_incremental
+        )
+
+    
+
 ),
 
 daily as (

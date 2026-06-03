@@ -1,70 +1,30 @@
-
+-- back compat for old kwarg name
   
+  begin;
     
-
-create or replace transient table DBT_TEST.marts.fct_daily_revenue_incremental
+        
+            
+	    
+	    
+            
+        
     
-    
-    
-    as (
-
-with orders as (
-
-    select *
-    from DBT_TEST.staging.stg_orders
 
     
 
-),
+    merge into DBT_TEST.marts.fct_daily_revenue_incremental as DBT_INTERNAL_DEST
+        using DBT_TEST.marts.fct_daily_revenue_incremental__dbt_tmp as DBT_INTERNAL_SOURCE
+        on ((DBT_INTERNAL_SOURCE.order_date = DBT_INTERNAL_DEST.order_date))
 
-daily as (
+    
+    when matched then update set
+        "ORDER_DATE" = DBT_INTERNAL_SOURCE."ORDER_DATE","TOTAL_ORDERS" = DBT_INTERNAL_SOURCE."TOTAL_ORDERS","COMPLETED_ORDERS" = DBT_INTERNAL_SOURCE."COMPLETED_ORDERS","CANCELLED_ORDERS" = DBT_INTERNAL_SOURCE."CANCELLED_ORDERS","GROSS_REVENUE" = DBT_INTERNAL_SOURCE."GROSS_REVENUE","NET_REVENUE" = DBT_INTERNAL_SOURCE."NET_REVENUE","AVG_ORDER_VALUE" = DBT_INTERNAL_SOURCE."AVG_ORDER_VALUE","UNIQUE_CUSTOMERS" = DBT_INTERNAL_SOURCE."UNIQUE_CUSTOMERS","DBT_UPDATED_AT" = DBT_INTERNAL_SOURCE."DBT_UPDATED_AT"
+    
 
-    select
-        order_date,
+    when not matched then insert
+        ("ORDER_DATE", "TOTAL_ORDERS", "COMPLETED_ORDERS", "CANCELLED_ORDERS", "GROSS_REVENUE", "NET_REVENUE", "AVG_ORDER_VALUE", "UNIQUE_CUSTOMERS", "DBT_UPDATED_AT")
+    values
+        ("ORDER_DATE", "TOTAL_ORDERS", "COMPLETED_ORDERS", "CANCELLED_ORDERS", "GROSS_REVENUE", "NET_REVENUE", "AVG_ORDER_VALUE", "UNIQUE_CUSTOMERS", "DBT_UPDATED_AT")
 
-        count(*) as total_orders,
-
-        sum(
-            case
-                when status = 'completed' then 1
-                else 0
-            end
-        ) as completed_orders,
-
-        sum(
-            case
-                when status = 'cancelled' then 1
-                else 0
-            end
-        ) as cancelled_orders,
-
-        coalesce(sum(amount), 0) as gross_revenue,
-
-        coalesce(
-            sum(
-                case
-                    when status = 'completed' then amount
-                    else 0
-                end
-            ),
-            0
-        ) as net_revenue,
-
-        avg(amount) as avg_order_value,
-
-        count(distinct customer_id) as unique_customers,
-
-        current_timestamp() as dbt_updated_at
-
-    from orders
-    group by order_date
-
-)
-
-select *
-from daily
-    )
 ;
-
-
-  
+    commit;
