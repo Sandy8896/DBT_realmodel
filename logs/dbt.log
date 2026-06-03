@@ -194,3 +194,67 @@ Compilation Error in model fct_events_incremental (models/marts/fct_events_incre
 [0m03:31:04.672939 [debug] [Dummy-1   ]: Resource report: {"command_name": "run", "command_success": false, "command_wall_clock_time": 1.7328906, "process_in_blocks": "0", "process_kernel_time": 0.83, "process_mem_max_rss": "451492", "process_out_blocks": "0", "process_user_time": 3.94}
 [0m03:31:04.673588 [debug] [Dummy-1   ]: Command `cli run` failed at 03:31:04.673323 after 1.73 seconds
 [0m03:31:04.674186 [debug] [Dummy-1   ]: Flushing usage events
+
+
+============================== 03:32:01.999089 | 802063fe-5753-4e86-be4b-68e424a678c5 ==============================
+[0m03:32:01.999089 [info ] [Dummy-1   ]: Running with dbt=1.9.4
+[0m03:32:01.999941 [debug] [Dummy-1   ]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'version_check': 'True', 'fail_fast': 'False', 'log_path': '/tmp/dbt/logs', 'profiles_dir': '/tmp/dbt/', 'debug': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'False', 'quiet': 'False', 'no_print': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'static_parser': 'True', 'introspect': 'True', 'invocation_command': 'dbt ', 'target_path': '/tmp/dbt/target/', 'log_format': 'default', 'send_anonymous_usage_stats': 'False'}
+[0m03:32:02.277971 [info ] [Dummy-1   ]: Registered adapter: snowflake=1.9.2
+[0m03:32:02.688819 [debug] [Dummy-1   ]: checksum: 53ed91fada2233efb98368d1716b44ab532c83a9c293cf1890b7905d5b45fb25, vars: {}, profile: , target: dev, version: 1.9.4
+[0m03:32:02.690163 [info ] [Dummy-1   ]: Unable to do partial parsing because saved manifest not found. Starting full parse.
+[0m03:32:03.667818 [error] [Dummy-1   ]: Encountered an error:
+Compilation Error in model fct_events_incremental (models/marts/fct_events_incremental.sql)
+  invalid syntax for function call expression
+    line 21
+      config(
+[0m03:32:03.669473 [debug] [Dummy-1   ]: Resource report: {"command_name": "run", "command_success": false, "command_wall_clock_time": 1.7446464, "process_in_blocks": "0", "process_kernel_time": 0.68, "process_mem_max_rss": "441288", "process_out_blocks": "0", "process_user_time": 4.15}
+[0m03:32:03.670089 [debug] [Dummy-1   ]: Command `cli run` failed at 03:32:03.669832 after 1.75 seconds
+[0m03:32:03.670652 [debug] [Dummy-1   ]: Flushing usage events
+
+
+============================== 03:34:41.053436 | 121f6c57-6f01-4506-a67b-db6ce747f3b0 ==============================
+[0m03:34:41.053436 [info ] [Dummy-1   ]: Running with dbt=1.9.4
+[0m03:34:41.054262 [debug] [Dummy-1   ]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'debug': 'False', 'version_check': 'True', 'log_path': '/tmp/dbt/logs', 'profiles_dir': '/tmp/dbt/', 'fail_fast': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'None', 'log_format': 'default', 'invocation_command': 'dbt ', 'introspect': 'True', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'target_path': '/tmp/dbt/target/', 'static_parser': 'True', 'send_anonymous_usage_stats': 'False'}
+[0m03:34:41.325609 [info ] [Dummy-1   ]: Registered adapter: snowflake=1.9.2
+[0m03:34:41.734538 [debug] [Dummy-1   ]: checksum: 53ed91fada2233efb98368d1716b44ab532c83a9c293cf1890b7905d5b45fb25, vars: {}, profile: , target: dev, version: 1.9.4
+[0m03:34:41.735694 [info ] [Dummy-1   ]: Unable to do partial parsing because saved manifest not found. Starting full parse.
+[0m03:34:42.728105 [error] [Dummy-1   ]: Encountered an error:
+Compilation Error in model fct_events_incremental (models/marts/fct_events_incremental.sql)
+  invalid syntax for function call expression
+    line 21
+      config(
+[0m03:34:42.729651 [debug] [Dummy-1   ]: Resource report: {"command_name": "seed", "command_success": false, "command_wall_clock_time": 1.7474151, "process_in_blocks": "0", "process_kernel_time": 0.63, "process_mem_max_rss": "451268", "process_out_blocks": "0", "process_user_time": 4.17}
+[0m03:34:42.730270 [debug] [Dummy-1   ]: Command `cli seed` failed at 03:34:42.730016 after 1.75 seconds
+[0m03:34:42.730842 [debug] [Dummy-1   ]: Flushing usage events
+
+
+============================== 03:35:32.892829 | a7f5ea90-2348-4811-a36f-3b44337beed7 ==============================
+[0m03:35:32.892829 [info ] [Dummy-1   ]: Running with dbt=1.9.4
+[0m03:35:32.893714 [debug] [Dummy-1   ]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/tmp/dbt/', 'version_check': 'True', 'debug': 'False', 'log_path': '/tmp/dbt/logs', 'fail_fast': 'False', 'warn_error': 'None', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'None', 'quiet': 'False', 'no_print': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'invocation_command': 'dbt ', 'static_parser': 'True', 'introspect': 'True', 'target_path': '/tmp/dbt/target/', 'log_format': 'default', 'send_anonymous_usage_stats': 'False'}
+[0m03:35:33.168581 [info ] [Dummy-1   ]: Registered adapter: snowflake=1.9.2
+[0m03:35:33.581078 [debug] [Dummy-1   ]: checksum: 53ed91fada2233efb98368d1716b44ab532c83a9c293cf1890b7905d5b45fb25, vars: {}, profile: , target: dev, version: 1.9.4
+[0m03:35:33.582258 [info ] [Dummy-1   ]: Unable to do partial parsing because saved manifest not found. Starting full parse.
+[0m03:35:34.566426 [error] [Dummy-1   ]: Encountered an error:
+Compilation Error in model fct_events_incremental (models/marts/fct_events_incremental.sql)
+  invalid syntax for function call expression
+    line 21
+      config(
+[0m03:35:34.567943 [debug] [Dummy-1   ]: Resource report: {"command_name": "seed", "command_success": false, "command_wall_clock_time": 1.7485026, "process_in_blocks": "0", "process_kernel_time": 0.77, "process_mem_max_rss": "450764", "process_out_blocks": "0", "process_user_time": 4.06}
+[0m03:35:34.568644 [debug] [Dummy-1   ]: Command `cli seed` failed at 03:35:34.568376 after 1.75 seconds
+[0m03:35:34.569212 [debug] [Dummy-1   ]: Flushing usage events
+
+
+============================== 03:36:17.956690 | 08df810c-f3e8-44f3-a830-48711107540e ==============================
+[0m03:36:17.956690 [info ] [Dummy-1   ]: Running with dbt=1.10.15
+[0m03:36:17.957692 [debug] [Dummy-1   ]: running dbt with arguments {'cache_selected_only': 'False', 'no_print': 'None', 'use_experimental_parser': 'False', 'debug': 'False', 'quiet': 'False', 'use_colors': 'True', 'invocation_command': 'dbt ', 'version_check': 'True', 'partial_parse': 'True', 'empty': 'None', 'target_path': '/tmp/dbt/target/', 'fail_fast': 'False', 'printer_width': '80', 'send_anonymous_usage_stats': 'False', 'profiles_dir': '/tmp/dbt/', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'log_path': '/tmp/dbt/logs', 'indirect_selection': 'eager', 'write_json': 'True', 'warn_error': 'None', 'log_cache_events': 'False', 'static_parser': 'True', 'introspect': 'True', 'log_format': 'default'}
+[0m03:36:18.202260 [info ] [Dummy-1   ]: Registered adapter: snowflake=1.10.3
+[0m03:36:18.471088 [debug] [Dummy-1   ]: checksum: 0f45fdd67cc51382d6521f874e757e7afa214ac7bb0178b13f1819cbe813499c, vars: {}, profile: , target: dev, version: 1.10.15
+[0m03:36:18.472231 [info ] [Dummy-1   ]: Unable to do partial parsing because saved manifest not found. Starting full parse.
+[0m03:36:19.435699 [error] [Dummy-1   ]: Encountered an error:
+Compilation Error in model fct_events_incremental (models/marts/fct_events_incremental.sql)
+  invalid syntax for function call expression
+    line 21
+      config(
+[0m03:36:19.437293 [debug] [Dummy-1   ]: Resource report: {"command_name": "seed", "command_success": false, "command_wall_clock_time": 1.5371715, "process_in_blocks": "0", "process_kernel_time": 0.82, "process_mem_max_rss": "408844", "process_out_blocks": "0", "process_user_time": 4.47}
+[0m03:36:19.437976 [debug] [Dummy-1   ]: Command `cli seed` failed at 03:36:19.437705 after 1.54 seconds
+[0m03:36:19.438600 [debug] [Dummy-1   ]: Flushing usage events
