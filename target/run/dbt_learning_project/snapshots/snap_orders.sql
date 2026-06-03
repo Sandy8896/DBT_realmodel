@@ -1,46 +1,22 @@
 
-      
-  
-    
+      begin;
+    merge into "DBT_TEST"."SNAPSHOTS"."SNAP_ORDERS" as DBT_INTERNAL_DEST
+    using "DBT_TEST"."SNAPSHOTS"."SNAP_ORDERS__dbt_tmp" as DBT_INTERNAL_SOURCE
+    on DBT_INTERNAL_SOURCE.dbt_scd_id = DBT_INTERNAL_DEST.dbt_scd_id
 
-create or replace transient table DBT_TEST.snapshots.snap_orders
-    
-    
-    
-    as (
-    
+    when matched
+     
+       and DBT_INTERNAL_DEST.dbt_valid_to is null
+     
+     and DBT_INTERNAL_SOURCE.dbt_change_type in ('update', 'delete')
+        then update
+        set dbt_valid_to = DBT_INTERNAL_SOURCE.dbt_valid_to
 
-    select *,
-        md5(coalesce(cast(order_id as varchar ), '')
-         || '|' || coalesce(cast(updated_at as varchar ), '')
-        ) as dbt_scd_id,
-        updated_at as dbt_updated_at,
-        updated_at as dbt_valid_from,
-        
-  
-  coalesce(nullif(updated_at, updated_at), null)
-  as dbt_valid_to
-from (
-        
+    when not matched
+     and DBT_INTERNAL_SOURCE.dbt_change_type = 'insert'
+        then insert ("ORDER_ID", "CUSTOMER_ID", "ORDER_DATE", "STATUS", "AMOUNT", "UPDATED_AT", "DBT_UPDATED_AT", "DBT_VALID_FROM", "DBT_VALID_TO", "DBT_SCD_ID")
+        values ("ORDER_ID", "CUSTOMER_ID", "ORDER_DATE", "STATUS", "AMOUNT", "UPDATED_AT", "DBT_UPDATED_AT", "DBT_VALID_FROM", "DBT_VALID_TO", "DBT_SCD_ID")
 
-
-
-select
-    order_id,
-    customer_id,
-    order_date,
-    status,
-    amount,
-    updated_at
-from DBT_TEST.raw.raw_orders
-
-    ) sbq
-
-
-
-    )
 ;
-
-
-  
+    commit;
   

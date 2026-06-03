@@ -1,13 +1,11 @@
 
     
     
-    
-    create table DBT_TEST.raw.raw_customers (customer_id integer,first_name text,last_name text,email text,country text,signup_date date,updated_at date)
-  ;
+    truncate table "DBT_TEST"."RAW"."RAW_CUSTOMERS";
     -- dbt seed --
     
             insert into DBT_TEST.raw.raw_customers (customer_id, first_name, last_name, email, country, signup_date, updated_at) values
-            (%s,%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s,%s)
+            (%s,%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s,%s)
         
 
 ;

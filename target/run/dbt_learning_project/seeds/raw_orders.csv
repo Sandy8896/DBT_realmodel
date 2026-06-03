@@ -1,9 +1,7 @@
 
     
     
-    
-    create table DBT_TEST.raw.raw_orders (order_id integer,customer_id integer,order_date date,status text,amount float8,updated_at date)
-  ;
+    truncate table "DBT_TEST"."RAW"."RAW_ORDERS";
     -- dbt seed --
     
             insert into DBT_TEST.raw.raw_orders (order_id, customer_id, order_date, status, amount, updated_at) values
