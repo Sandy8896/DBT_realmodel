@@ -274,3 +274,1064 @@ Compilation Error in snapshot snap_customers (snapshots/snap_customers.sql)
 [0m03:41:23.496387 [debug] [Dummy-1   ]: Resource report: {"command_name": "seed", "command_success": false, "command_wall_clock_time": 1.7616894, "process_in_blocks": "0", "process_kernel_time": 0.8, "process_mem_max_rss": "410092", "process_out_blocks": "0", "process_user_time": 4.68}
 [0m03:41:23.497030 [debug] [Dummy-1   ]: Command `cli seed` failed at 03:41:23.496768 after 1.76 seconds
 [0m03:41:23.497588 [debug] [Dummy-1   ]: Flushing usage events
+
+
+============================== 03:47:38.490349 | f88ae742-dae5-417b-856a-3a0686c8a22f ==============================
+[0m03:47:38.490349 [info ] [Dummy-1   ]: Running with dbt=1.10.15
+[0m03:47:38.491122 [debug] [Dummy-1   ]: running dbt with arguments {'cache_selected_only': 'False', 'version_check': 'True', 'profiles_dir': '/tmp/dbt/', 'static_parser': 'True', 'partial_parse': 'True', 'indirect_selection': 'eager', 'log_path': '/tmp/dbt/logs', 'log_format': 'default', 'empty': 'None', 'warn_error': 'None', 'no_print': 'None', 'log_cache_events': 'False', 'introspect': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'use_experimental_parser': 'False', 'target_path': '/tmp/dbt/target/', 'invocation_command': 'dbt ', 'fail_fast': 'False', 'quiet': 'False', 'write_json': 'True', 'send_anonymous_usage_stats': 'False', 'printer_width': '80', 'debug': 'False', 'use_colors': 'True'}
+[0m03:47:38.732997 [info ] [Dummy-1   ]: Registered adapter: snowflake=1.10.3
+[0m03:47:39.005139 [debug] [Dummy-1   ]: checksum: 0f45fdd67cc51382d6521f874e757e7afa214ac7bb0178b13f1819cbe813499c, vars: {}, profile: , target: dev, version: 1.10.15
+[0m03:47:39.006506 [info ] [Dummy-1   ]: Unable to do partial parsing because saved manifest not found. Starting full parse.
+[0m03:47:40.880457 [warn ] [Dummy-1   ]: [[33mWARNING[0m][MissingArgumentsPropertyInGenericTestDeprecation]: Deprecated
+functionality
+Found top-level arguments to test `accepted_values`. Arguments to generic tests
+should be nested under the `arguments` property.`
+[0m03:47:41.221839 [debug] [Dummy-1   ]: Wrote artifact WritableManifest to /tmp/dbt/target/manifest.json
+[0m03:47:41.223766 [debug] [Dummy-1   ]: Wrote artifact SemanticManifest to /tmp/dbt/target/semantic_manifest.json
+[0m03:47:41.267023 [info ] [Dummy-1   ]: Found 8 models, 2 snapshots, 1 analysis, 39 data tests, 3 seeds, 489 macros
+[0m03:47:41.269433 [info ] [Dummy-1   ]: 
+[0m03:47:41.269950 [info ] [Dummy-1   ]: Concurrency: 4 threads (target='dev')
+[0m03:47:41.270353 [info ] [Dummy-1   ]: 
+[0m03:47:41.271005 [debug] [Dummy-1   ]: Acquiring new snowflake connection 'master'
+[0m03:47:41.272561 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_DBT_TEST'
+[0m03:47:41.351261 [debug] [ThreadPool]: Using snowflake connection "list_DBT_TEST"
+[0m03:47:41.351797 [debug] [ThreadPool]: On list_DBT_TEST: show terse schemas in database DBT_TEST
+    limit 10000
+/* {"app": "dbt", "dbt_version": "1.10.15", "profile_name": "dbt_learning_project", "target_name": "dev", "connection_name": "list_DBT_TEST"} */
+[0m03:47:41.352254 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m03:47:41.643304 [debug] [ThreadPool]: SQL status: SUCCESS 4 in 0.291 seconds
+[0m03:47:41.650998 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_DBT_TEST, now list_DBT_TEST_staging)
+[0m03:47:41.652122 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_DBT_TEST_marts'
+[0m03:47:41.653176 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_DBT_TEST_raw'
+[0m03:47:41.667674 [debug] [ThreadPool]: Using snowflake connection "list_DBT_TEST_staging"
+[0m03:47:41.668571 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_DBT_TEST_snapshots'
+[0m03:47:41.672134 [debug] [ThreadPool]: Using snowflake connection "list_DBT_TEST_marts"
+[0m03:47:41.676289 [debug] [ThreadPool]: Using snowflake connection "list_DBT_TEST_raw"
+[0m03:47:41.676796 [debug] [ThreadPool]: On list_DBT_TEST_staging: show objects in DBT_TEST.staging
+    limit 10000
+    
+
+/* {"app": "dbt", "dbt_version": "1.10.15", "profile_name": "dbt_learning_project", "target_name": "dev", "connection_name": "list_DBT_TEST_staging"} */;
+[0m03:47:41.680263 [debug] [ThreadPool]: Using snowflake connection "list_DBT_TEST_snapshots"
+[0m03:47:41.680759 [debug] [ThreadPool]: On list_DBT_TEST_marts: show objects in DBT_TEST.marts
+    limit 10000
+    
+
+/* {"app": "dbt", "dbt_version": "1.10.15", "profile_name": "dbt_learning_project", "target_name": "dev", "connection_name": "list_DBT_TEST_marts"} */;
+[0m03:47:41.681218 [debug] [ThreadPool]: On list_DBT_TEST_raw: show objects in DBT_TEST.raw
+    limit 10000
+    
+
+/* {"app": "dbt", "dbt_version": "1.10.15", "profile_name": "dbt_learning_project", "target_name": "dev", "connection_name": "list_DBT_TEST_raw"} */;
+[0m03:47:41.681649 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m03:47:41.682079 [debug] [ThreadPool]: On list_DBT_TEST_snapshots: show objects in DBT_TEST.snapshots
+    limit 10000
+    
+
+/* {"app": "dbt", "dbt_version": "1.10.15", "profile_name": "dbt_learning_project", "target_name": "dev", "connection_name": "list_DBT_TEST_snapshots"} */;
+[0m03:47:41.682479 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m03:47:41.682869 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m03:47:41.683465 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m03:47:41.984609 [debug] [ThreadPool]: Snowflake adapter: Snowflake query id: 01c4cce7-000d-c1c1-0000-22e5000bcb72
+[0m03:47:41.985295 [debug] [ThreadPool]: Snowflake adapter: Snowflake query id: 01c4cce7-000d-c1c1-0000-22e5000bcb7e
+[0m03:47:41.986069 [debug] [ThreadPool]: Snowflake adapter: Snowflake error: 002043 (02000): SQL compilation error:
+Object does not exist, or operation cannot be performed.
+[0m03:47:41.986751 [debug] [ThreadPool]: Snowflake adapter: Snowflake query id: 01c4cce7-000d-c1c1-0000-22e5000bcb7a
+[0m03:47:41.987265 [debug] [ThreadPool]: Snowflake adapter: Snowflake error: 002043 (02000): SQL compilation error:
+Object does not exist, or operation cannot be performed.
+[0m03:47:41.987843 [debug] [ThreadPool]: Snowflake adapter: Error running SQL: macro list_relations_without_caching
+[0m03:47:41.988395 [debug] [ThreadPool]: Snowflake adapter: Snowflake error: 002043 (02000): SQL compilation error:
+Object does not exist, or operation cannot be performed.
+[0m03:47:41.988924 [debug] [ThreadPool]: Snowflake adapter: Error running SQL: macro list_relations_without_caching
+[0m03:47:41.989356 [debug] [ThreadPool]: Snowflake adapter: Rolling back transaction.
+[0m03:47:41.989903 [debug] [ThreadPool]: Snowflake adapter: Error running SQL: macro list_relations_without_caching
+[0m03:47:41.990351 [debug] [ThreadPool]: Snowflake adapter: Rolling back transaction.
+[0m03:47:41.991267 [debug] [ThreadPool]: Snowflake adapter: Rolling back transaction.
+[0m03:47:41.995509 [debug] [ThreadPool]: SQL status: SUCCESS 5 in 0.313 seconds
+[0m03:47:42.004798 [debug] [Thread-2 (]: Began running node seed.dbt_learning_project.raw_events
+[0m03:47:42.005546 [info ] [Thread-2 (]: 1 of 1 START seed file raw.raw_events .......................................... [RUN]
+[0m03:47:42.006174 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly list_DBT_TEST_staging, now seed.dbt_learning_project.raw_events)
+[0m03:47:42.006700 [debug] [Thread-2 (]: Began compiling node seed.dbt_learning_project.raw_events
+[0m03:47:42.007198 [debug] [Thread-2 (]: Began executing node seed.dbt_learning_project.raw_events
+[0m03:47:42.042054 [debug] [Thread-2 (]: Using snowflake connection "seed.dbt_learning_project.raw_events"
+[0m03:47:42.042628 [debug] [Thread-2 (]: On seed.dbt_learning_project.raw_events: create table DBT_TEST.raw.raw_events (event_id text,customer_id integer,event_type text,event_ts timestamp without time zone,page text,updated_at timestamp without time zone)
+/* {"app": "dbt", "dbt_version": "1.10.15", "profile_name": "dbt_learning_project", "target_name": "dev", "node_id": "seed.dbt_learning_project.raw_events"} */
+[0m03:47:42.043115 [debug] [Thread-2 (]: Opening a new connection, currently in state init
+[0m03:47:42.389589 [debug] [Thread-2 (]: SQL status: SUCCESS 1 in 0.346 seconds
+[0m03:47:42.406024 [debug] [Thread-2 (]: Using snowflake connection "seed.dbt_learning_project.raw_events"
+[0m03:47:42.406586 [debug] [Thread-2 (]: On seed.dbt_learning_project.raw_events: BEGIN
+/* {"app": "dbt", "dbt_version": "1.10.15", "profile_name": "dbt_learning_project", "target_name": "dev", "node_id": "seed.dbt_learning_project.raw_events"} */
+[0m03:47:42.449771 [debug] [Thread-2 (]: SQL status: SUCCESS 1 in 0.043 seconds
+[0m03:47:42.450771 [debug] [Thread-2 (]: Using snowflake connection "seed.dbt_learning_project.raw_events"
+[0m03:47:42.451278 [debug] [Thread-2 (]: On seed.dbt_learning_project.raw_events: insert into DBT_TEST.raw.raw_events (event_id, customer_id, event_type, event_ts, page, updated_at) values
+            (%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s)
+/* {"app": "dbt", "dbt_version": "1.10.15", "profile_name": "dbt_learning_project", "target_name": "dev", "node_id": "seed.dbt_learning_project.raw_events"} */...
+[0m03:47:42.694030 [debug] [Thread-2 (]: SQL status: SUCCESS 10 in 0.242 seconds
+[0m03:47:42.694796 [debug] [Thread-2 (]: Using snowflake connection "seed.dbt_learning_project.raw_events"
+[0m03:47:42.695293 [debug] [Thread-2 (]: On seed.dbt_learning_project.raw_events: COMMIT
+/* {"app": "dbt", "dbt_version": "1.10.15", "profile_name": "dbt_learning_project", "target_name": "dev", "node_id": "seed.dbt_learning_project.raw_events"} */
+[0m03:47:42.878945 [debug] [Thread-2 (]: SQL status: SUCCESS 1 in 0.183 seconds
+[0m03:47:42.884652 [debug] [Thread-2 (]: Writing runtime SQL for node "seed.dbt_learning_project.raw_events"
+[0m03:47:42.910432 [info ] [Thread-2 (]: 1 of 1 OK loaded seed file raw.raw_events ...................................... [[32mINSERT 10[0m in 0.90s]
+[0m03:47:42.911152 [debug] [Thread-2 (]: Finished running node seed.dbt_learning_project.raw_events
+[0m03:47:42.913549 [debug] [Dummy-1   ]: Connection 'master' was properly closed.
+[0m03:47:42.914045 [debug] [Dummy-1   ]: Connection 'seed.dbt_learning_project.raw_events' was properly closed.
+[0m03:47:42.914435 [debug] [Dummy-1   ]: Connection 'list_DBT_TEST_marts' was properly closed.
+[0m03:47:42.914803 [debug] [Dummy-1   ]: Connection 'list_DBT_TEST_raw' was properly closed.
+[0m03:47:42.915178 [debug] [Dummy-1   ]: Connection 'list_DBT_TEST_snapshots' was properly closed.
+[0m03:47:42.915582 [info ] [Dummy-1   ]: 
+[0m03:47:42.916011 [info ] [Dummy-1   ]: Finished running 1 seed in 0 hours 0 minutes and 1.64 seconds (1.64s).
+[0m03:47:42.916759 [debug] [Dummy-1   ]: Command end result
+[0m03:47:42.947276 [debug] [Dummy-1   ]: Wrote artifact WritableManifest to /tmp/dbt/target/manifest.json
+[0m03:47:42.949163 [debug] [Dummy-1   ]: Wrote artifact SemanticManifest to /tmp/dbt/target/semantic_manifest.json
+[0m03:47:42.954689 [debug] [Dummy-1   ]: Wrote artifact RunExecutionResult to /tmp/dbt/target/run_results.json
+[0m03:47:42.955101 [info ] [Dummy-1   ]: 
+[0m03:47:42.955660 [info ] [Dummy-1   ]: [32mCompleted successfully[0m
+[0m03:47:42.956083 [info ] [Dummy-1   ]: 
+[0m03:47:42.956563 [info ] [Dummy-1   ]: Done. PASS=1 WARN=0 ERROR=0 SKIP=0 NO-OP=0 TOTAL=1
+[0m03:47:42.957447 [warn ] [Dummy-1   ]: [[33mWARNING[0m][DeprecationsSummary]: Deprecated functionality
+Summary of encountered deprecations:
+- MissingArgumentsPropertyInGenericTestDeprecation: 7 occurrences
+To see all deprecation instances instead of just the first occurrence of each,
+run command again with the `--show-all-deprecations` flag. You may also need to
+run with `--no-partial-parse` as some deprecations are only encountered during
+parsing.
+[0m03:47:42.959022 [debug] [Dummy-1   ]: Resource report: {"command_name": "seed", "command_success": true, "command_wall_clock_time": 4.5246606, "process_in_blocks": "0", "process_kernel_time": 0.79, "process_mem_max_rss": "471800", "process_out_blocks": "0", "process_user_time": 6.15}
+[0m03:47:42.959649 [debug] [Dummy-1   ]: Command `cli seed` succeeded at 03:47:42.959397 after 4.53 seconds
+[0m03:47:42.960163 [debug] [Dummy-1   ]: Flushing usage events
+
+
+============================== 03:48:19.812282 | f4d75f50-36cd-487e-848c-6cbfc29d4239 ==============================
+[0m03:48:19.812282 [info ] [Dummy-1   ]: Running with dbt=1.10.15
+[0m03:48:19.813034 [debug] [Dummy-1   ]: running dbt with arguments {'fail_fast': 'False', 'invocation_command': 'dbt ', 'debug': 'False', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'send_anonymous_usage_stats': 'False', 'cache_selected_only': 'False', 'write_json': 'True', 'quiet': 'False', 'empty': 'None', 'introspect': 'True', 'printer_width': '80', 'profiles_dir': '/tmp/dbt/', 'version_check': 'True', 'use_experimental_parser': 'False', 'warn_error': 'None', 'log_format': 'default', 'static_parser': 'True', 'use_colors': 'True', 'indirect_selection': 'eager', 'log_path': '/tmp/dbt/logs', 'target_path': '/tmp/dbt/target/', 'no_print': 'None', 'log_cache_events': 'False', 'partial_parse': 'True'}
+[0m03:48:20.052823 [info ] [Dummy-1   ]: Registered adapter: snowflake=1.10.3
+[0m03:48:20.324143 [debug] [Dummy-1   ]: checksum: 0f45fdd67cc51382d6521f874e757e7afa214ac7bb0178b13f1819cbe813499c, vars: {}, profile: , target: dev, version: 1.10.15
+[0m03:48:20.523935 [debug] [Dummy-1   ]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m03:48:20.524499 [debug] [Dummy-1   ]: Partial parsing enabled, no changes found, skipping parsing
+[0m03:48:20.737835 [debug] [Dummy-1   ]: Wrote artifact WritableManifest to /tmp/dbt/target/manifest.json
+[0m03:48:20.739778 [debug] [Dummy-1   ]: Wrote artifact SemanticManifest to /tmp/dbt/target/semantic_manifest.json
+[0m03:48:20.783202 [info ] [Dummy-1   ]: Found 8 models, 2 snapshots, 1 analysis, 39 data tests, 3 seeds, 489 macros
+[0m03:48:20.785961 [info ] [Dummy-1   ]: 
+[0m03:48:20.786434 [info ] [Dummy-1   ]: Concurrency: 4 threads (target='dev')
+[0m03:48:20.786844 [info ] [Dummy-1   ]: 
+[0m03:48:20.787519 [debug] [Dummy-1   ]: Acquiring new snowflake connection 'master'
+[0m03:48:20.792937 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_DBT_TEST'
+[0m03:48:20.872005 [debug] [ThreadPool]: Using snowflake connection "list_DBT_TEST"
+[0m03:48:20.872570 [debug] [ThreadPool]: On list_DBT_TEST: show terse schemas in database DBT_TEST
+    limit 10000
+/* {"app": "dbt", "dbt_version": "1.10.15", "profile_name": "dbt_learning_project", "target_name": "dev", "connection_name": "list_DBT_TEST"} */
+[0m03:48:20.873025 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m03:48:21.169273 [debug] [ThreadPool]: SQL status: SUCCESS 4 in 0.296 seconds
+[0m03:48:21.173274 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_DBT_TEST_marts'
+[0m03:48:21.174252 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_DBT_TEST, now list_DBT_TEST_raw)
+[0m03:48:21.240569 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_DBT_TEST_snapshots'
+[0m03:48:21.253722 [debug] [ThreadPool]: Using snowflake connection "list_DBT_TEST_marts"
+[0m03:48:21.254652 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_DBT_TEST_staging'
+[0m03:48:21.258383 [debug] [ThreadPool]: Using snowflake connection "list_DBT_TEST_raw"
+[0m03:48:21.261908 [debug] [ThreadPool]: Using snowflake connection "list_DBT_TEST_snapshots"
+[0m03:48:21.262408 [debug] [ThreadPool]: On list_DBT_TEST_marts: show objects in DBT_TEST.marts
+    limit 10000
+    
+
+/* {"app": "dbt", "dbt_version": "1.10.15", "profile_name": "dbt_learning_project", "target_name": "dev", "connection_name": "list_DBT_TEST_marts"} */;
+[0m03:48:21.265799 [debug] [ThreadPool]: Using snowflake connection "list_DBT_TEST_staging"
+[0m03:48:21.266295 [debug] [ThreadPool]: On list_DBT_TEST_raw: show objects in DBT_TEST.raw
+    limit 10000
+    
+
+/* {"app": "dbt", "dbt_version": "1.10.15", "profile_name": "dbt_learning_project", "target_name": "dev", "connection_name": "list_DBT_TEST_raw"} */;
+[0m03:48:21.266742 [debug] [ThreadPool]: On list_DBT_TEST_snapshots: show objects in DBT_TEST.snapshots
+    limit 10000
+    
+
+/* {"app": "dbt", "dbt_version": "1.10.15", "profile_name": "dbt_learning_project", "target_name": "dev", "connection_name": "list_DBT_TEST_snapshots"} */;
+[0m03:48:21.267182 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m03:48:21.267630 [debug] [ThreadPool]: On list_DBT_TEST_staging: show objects in DBT_TEST.staging
+    limit 10000
+    
+
+/* {"app": "dbt", "dbt_version": "1.10.15", "profile_name": "dbt_learning_project", "target_name": "dev", "connection_name": "list_DBT_TEST_staging"} */;
+[0m03:48:21.268063 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m03:48:21.268588 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m03:48:21.269173 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m03:48:21.563897 [debug] [ThreadPool]: Snowflake adapter: Snowflake query id: 01c4cce8-000d-c22e-0000-22e5000be732
+[0m03:48:21.564769 [debug] [ThreadPool]: Snowflake adapter: Snowflake query id: 01c4cce8-000d-c22e-0000-22e5000be736
+[0m03:48:21.565385 [debug] [ThreadPool]: Snowflake adapter: Snowflake query id: 01c4cce8-000d-c22e-0000-22e5000be72e
+[0m03:48:21.565868 [debug] [ThreadPool]: Snowflake adapter: Snowflake error: 002043 (02000): SQL compilation error:
+Object does not exist, or operation cannot be performed.
+[0m03:48:21.566353 [debug] [ThreadPool]: Snowflake adapter: Snowflake error: 002043 (02000): SQL compilation error:
+Object does not exist, or operation cannot be performed.
+[0m03:48:21.566816 [debug] [ThreadPool]: Snowflake adapter: Snowflake error: 002043 (02000): SQL compilation error:
+Object does not exist, or operation cannot be performed.
+[0m03:48:21.567376 [debug] [ThreadPool]: Snowflake adapter: Error running SQL: macro list_relations_without_caching
+[0m03:48:21.567926 [debug] [ThreadPool]: Snowflake adapter: Error running SQL: macro list_relations_without_caching
+[0m03:48:21.568693 [debug] [ThreadPool]: Snowflake adapter: Error running SQL: macro list_relations_without_caching
+[0m03:48:21.569152 [debug] [ThreadPool]: Snowflake adapter: Rolling back transaction.
+[0m03:48:21.569590 [debug] [ThreadPool]: Snowflake adapter: Rolling back transaction.
+[0m03:48:21.570022 [debug] [ThreadPool]: Snowflake adapter: Rolling back transaction.
+[0m03:48:21.600523 [debug] [ThreadPool]: SQL status: SUCCESS 6 in 0.332 seconds
+[0m03:48:21.610079 [debug] [Thread-2 (]: Began running node seed.dbt_learning_project.raw_customers
+[0m03:48:21.610650 [debug] [Thread-3 (]: Began running node seed.dbt_learning_project.raw_events
+[0m03:48:21.611194 [debug] [Thread-4 (]: Began running node seed.dbt_learning_project.raw_orders
+[0m03:48:21.611870 [info ] [Thread-2 (]: 1 of 3 START seed file raw.raw_customers ....................................... [RUN]
+[0m03:48:21.612554 [info ] [Thread-3 (]: 2 of 3 START seed file raw.raw_events .......................................... [RUN]
+[0m03:48:21.613226 [info ] [Thread-4 (]: 3 of 3 START seed file raw.raw_orders .......................................... [RUN]
+[0m03:48:21.613869 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly list_DBT_TEST_marts, now seed.dbt_learning_project.raw_customers)
+[0m03:48:21.614424 [debug] [Thread-3 (]: Re-using an available connection from the pool (formerly list_DBT_TEST_raw, now seed.dbt_learning_project.raw_events)
+[0m03:48:21.614956 [debug] [Thread-4 (]: Re-using an available connection from the pool (formerly list_DBT_TEST_snapshots, now seed.dbt_learning_project.raw_orders)
+[0m03:48:21.615470 [debug] [Thread-2 (]: Began compiling node seed.dbt_learning_project.raw_customers
+[0m03:48:21.615956 [debug] [Thread-3 (]: Began compiling node seed.dbt_learning_project.raw_events
+[0m03:48:21.616440 [debug] [Thread-4 (]: Began compiling node seed.dbt_learning_project.raw_orders
+[0m03:48:21.616973 [debug] [Thread-2 (]: Began executing node seed.dbt_learning_project.raw_customers
+[0m03:48:21.617468 [debug] [Thread-3 (]: Began executing node seed.dbt_learning_project.raw_events
+[0m03:48:21.617978 [debug] [Thread-4 (]: Began executing node seed.dbt_learning_project.raw_orders
+[0m03:48:21.668681 [debug] [Thread-2 (]: Using snowflake connection "seed.dbt_learning_project.raw_customers"
+[0m03:48:21.678181 [debug] [Thread-3 (]: Using snowflake connection "seed.dbt_learning_project.raw_events"
+[0m03:48:21.679571 [debug] [Thread-2 (]: On seed.dbt_learning_project.raw_customers: create table DBT_TEST.raw.raw_customers (customer_id integer,first_name text,last_name text,email text,country text,signup_date date,updated_at date)
+/* {"app": "dbt", "dbt_version": "1.10.15", "profile_name": "dbt_learning_project", "target_name": "dev", "node_id": "seed.dbt_learning_project.raw_customers"} */
+[0m03:48:21.680882 [debug] [Thread-4 (]: Using snowflake connection "seed.dbt_learning_project.raw_orders"
+[0m03:48:21.681522 [debug] [Thread-3 (]: On seed.dbt_learning_project.raw_events: BEGIN
+/* {"app": "dbt", "dbt_version": "1.10.15", "profile_name": "dbt_learning_project", "target_name": "dev", "node_id": "seed.dbt_learning_project.raw_events"} */
+[0m03:48:21.682107 [debug] [Thread-2 (]: Opening a new connection, currently in state init
+[0m03:48:21.682588 [debug] [Thread-4 (]: On seed.dbt_learning_project.raw_orders: create table DBT_TEST.raw.raw_orders (order_id integer,customer_id integer,order_date date,status text,amount float8,updated_at date)
+/* {"app": "dbt", "dbt_version": "1.10.15", "profile_name": "dbt_learning_project", "target_name": "dev", "node_id": "seed.dbt_learning_project.raw_orders"} */
+[0m03:48:21.683141 [debug] [Thread-3 (]: Opening a new connection, currently in state init
+[0m03:48:21.683802 [debug] [Thread-4 (]: Opening a new connection, currently in state init
+[0m03:48:21.965624 [debug] [Thread-3 (]: SQL status: SUCCESS 1 in 0.282 seconds
+[0m03:48:21.966353 [debug] [Thread-3 (]: Using snowflake connection "seed.dbt_learning_project.raw_events"
+[0m03:48:21.966937 [debug] [Thread-3 (]: On seed.dbt_learning_project.raw_events: truncate table "DBT_TEST"."RAW"."RAW_EVENTS"
+  
+/* {"app": "dbt", "dbt_version": "1.10.15", "profile_name": "dbt_learning_project", "target_name": "dev", "node_id": "seed.dbt_learning_project.raw_events"} */;
+[0m03:48:22.034575 [debug] [Thread-4 (]: SQL status: SUCCESS 1 in 0.351 seconds
+[0m03:48:22.035355 [debug] [Thread-2 (]: SQL status: SUCCESS 1 in 0.353 seconds
+[0m03:48:22.050548 [debug] [Thread-4 (]: Using snowflake connection "seed.dbt_learning_project.raw_orders"
+[0m03:48:22.052251 [debug] [Thread-2 (]: Using snowflake connection "seed.dbt_learning_project.raw_customers"
+[0m03:48:22.052802 [debug] [Thread-4 (]: On seed.dbt_learning_project.raw_orders: BEGIN
+/* {"app": "dbt", "dbt_version": "1.10.15", "profile_name": "dbt_learning_project", "target_name": "dev", "node_id": "seed.dbt_learning_project.raw_orders"} */
+[0m03:48:22.053304 [debug] [Thread-2 (]: On seed.dbt_learning_project.raw_customers: BEGIN
+/* {"app": "dbt", "dbt_version": "1.10.15", "profile_name": "dbt_learning_project", "target_name": "dev", "node_id": "seed.dbt_learning_project.raw_customers"} */
+[0m03:48:22.094333 [debug] [Thread-2 (]: SQL status: SUCCESS 1 in 0.040 seconds
+[0m03:48:22.095063 [debug] [Thread-4 (]: SQL status: SUCCESS 1 in 0.041 seconds
+[0m03:48:22.095982 [debug] [Thread-2 (]: Using snowflake connection "seed.dbt_learning_project.raw_customers"
+[0m03:48:22.096931 [debug] [Thread-4 (]: Using snowflake connection "seed.dbt_learning_project.raw_orders"
+[0m03:48:22.097480 [debug] [Thread-2 (]: On seed.dbt_learning_project.raw_customers: insert into DBT_TEST.raw.raw_customers (customer_id, first_name, last_name, email, country, signup_date, updated_at) values
+            (%s,%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s,%s)
+/* {"app": "dbt", "dbt_version": "1.10.15", "profile_name": "dbt_learning_project", "target_name": "dev", "node_id": "seed.dbt_learning_project.raw_customers"} */...
+[0m03:48:22.098015 [debug] [Thread-4 (]: On seed.dbt_learning_project.raw_orders: insert into DBT_TEST.raw.raw_orders (order_id, customer_id, order_date, status, amount, updated_at) values
+            (%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s)
+/* {"app": "dbt", "dbt_version": "1.10.15", "profile_name": "dbt_learning_project", "target_name": "dev", "node_id": "seed.dbt_learning_project.raw_orders"} */...
+[0m03:48:22.208677 [debug] [Thread-3 (]: SQL status: SUCCESS 1 in 0.241 seconds
+[0m03:48:22.209578 [debug] [Thread-3 (]: Using snowflake connection "seed.dbt_learning_project.raw_events"
+[0m03:48:22.210180 [debug] [Thread-3 (]: On seed.dbt_learning_project.raw_events: COMMIT
+/* {"app": "dbt", "dbt_version": "1.10.15", "profile_name": "dbt_learning_project", "target_name": "dev", "node_id": "seed.dbt_learning_project.raw_events"} */
+[0m03:48:22.333628 [debug] [Thread-3 (]: SQL status: SUCCESS 1 in 0.123 seconds
+[0m03:48:22.334523 [debug] [Thread-4 (]: SQL status: SUCCESS 10 in 0.235 seconds
+[0m03:48:22.336494 [debug] [Thread-3 (]: Using snowflake connection "seed.dbt_learning_project.raw_events"
+[0m03:48:22.337150 [debug] [Thread-4 (]: Using snowflake connection "seed.dbt_learning_project.raw_orders"
+[0m03:48:22.337660 [debug] [Thread-3 (]: On seed.dbt_learning_project.raw_events: BEGIN
+/* {"app": "dbt", "dbt_version": "1.10.15", "profile_name": "dbt_learning_project", "target_name": "dev", "node_id": "seed.dbt_learning_project.raw_events"} */
+[0m03:48:22.338221 [debug] [Thread-4 (]: On seed.dbt_learning_project.raw_orders: COMMIT
+/* {"app": "dbt", "dbt_version": "1.10.15", "profile_name": "dbt_learning_project", "target_name": "dev", "node_id": "seed.dbt_learning_project.raw_orders"} */
+[0m03:48:22.378669 [debug] [Thread-2 (]: SQL status: SUCCESS 6 in 0.280 seconds
+[0m03:48:22.379319 [debug] [Thread-2 (]: Using snowflake connection "seed.dbt_learning_project.raw_customers"
+[0m03:48:22.379796 [debug] [Thread-2 (]: On seed.dbt_learning_project.raw_customers: COMMIT
+/* {"app": "dbt", "dbt_version": "1.10.15", "profile_name": "dbt_learning_project", "target_name": "dev", "node_id": "seed.dbt_learning_project.raw_customers"} */
+[0m03:48:22.388417 [debug] [Thread-3 (]: SQL status: SUCCESS 1 in 0.050 seconds
+[0m03:48:22.389367 [debug] [Thread-3 (]: Using snowflake connection "seed.dbt_learning_project.raw_events"
+[0m03:48:22.389881 [debug] [Thread-3 (]: On seed.dbt_learning_project.raw_events: insert into DBT_TEST.raw.raw_events (event_id, customer_id, event_type, event_ts, page, updated_at) values
+            (%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s)
+/* {"app": "dbt", "dbt_version": "1.10.15", "profile_name": "dbt_learning_project", "target_name": "dev", "node_id": "seed.dbt_learning_project.raw_events"} */...
+[0m03:48:22.460618 [debug] [Thread-4 (]: SQL status: SUCCESS 1 in 0.122 seconds
+[0m03:48:22.466634 [debug] [Thread-4 (]: Writing runtime SQL for node "seed.dbt_learning_project.raw_orders"
+[0m03:48:22.492525 [info ] [Thread-4 (]: 3 of 3 OK loaded seed file raw.raw_orders ...................................... [[32mINSERT 10[0m in 0.88s]
+[0m03:48:22.493307 [debug] [Thread-4 (]: Finished running node seed.dbt_learning_project.raw_orders
+[0m03:48:22.511860 [debug] [Thread-2 (]: SQL status: SUCCESS 1 in 0.131 seconds
+[0m03:48:22.512689 [debug] [Thread-2 (]: Writing runtime SQL for node "seed.dbt_learning_project.raw_customers"
+[0m03:48:22.515222 [info ] [Thread-2 (]: 1 of 3 OK loaded seed file raw.raw_customers ................................... [[32mINSERT 6[0m in 0.90s]
+[0m03:48:22.515919 [debug] [Thread-2 (]: Finished running node seed.dbt_learning_project.raw_customers
+[0m03:48:22.610475 [debug] [Thread-3 (]: SQL status: SUCCESS 10 in 0.220 seconds
+[0m03:48:22.611236 [debug] [Thread-3 (]: Using snowflake connection "seed.dbt_learning_project.raw_events"
+[0m03:48:22.611730 [debug] [Thread-3 (]: On seed.dbt_learning_project.raw_events: COMMIT
+/* {"app": "dbt", "dbt_version": "1.10.15", "profile_name": "dbt_learning_project", "target_name": "dev", "node_id": "seed.dbt_learning_project.raw_events"} */
+[0m03:48:22.732089 [debug] [Thread-3 (]: SQL status: SUCCESS 1 in 0.120 seconds
+[0m03:48:22.732973 [debug] [Thread-3 (]: Writing runtime SQL for node "seed.dbt_learning_project.raw_events"
+[0m03:48:22.735562 [info ] [Thread-3 (]: 2 of 3 OK loaded seed file raw.raw_events ...................................... [[32mINSERT 10[0m in 1.12s]
+[0m03:48:22.736262 [debug] [Thread-3 (]: Finished running node seed.dbt_learning_project.raw_events
+[0m03:48:22.738865 [debug] [Dummy-1   ]: Connection 'master' was properly closed.
+[0m03:48:22.739701 [debug] [Dummy-1   ]: Connection 'seed.dbt_learning_project.raw_events' was properly closed.
+[0m03:48:22.740280 [debug] [Dummy-1   ]: Connection 'seed.dbt_learning_project.raw_customers' was properly closed.
+[0m03:48:22.740774 [debug] [Dummy-1   ]: Connection 'seed.dbt_learning_project.raw_orders' was properly closed.
+[0m03:48:22.741197 [debug] [Dummy-1   ]: Connection 'list_DBT_TEST_staging' was properly closed.
+[0m03:48:22.741662 [info ] [Dummy-1   ]: 
+[0m03:48:22.742120 [info ] [Dummy-1   ]: Finished running 3 seeds in 0 hours 0 minutes and 1.95 seconds (1.95s).
+[0m03:48:22.743092 [debug] [Dummy-1   ]: Command end result
+[0m03:48:22.774809 [debug] [Dummy-1   ]: Wrote artifact WritableManifest to /tmp/dbt/target/manifest.json
+[0m03:48:22.776575 [debug] [Dummy-1   ]: Wrote artifact SemanticManifest to /tmp/dbt/target/semantic_manifest.json
+[0m03:48:22.782792 [debug] [Dummy-1   ]: Wrote artifact RunExecutionResult to /tmp/dbt/target/run_results.json
+[0m03:48:22.783224 [info ] [Dummy-1   ]: 
+[0m03:48:22.783831 [info ] [Dummy-1   ]: [32mCompleted successfully[0m
+[0m03:48:22.784286 [info ] [Dummy-1   ]: 
+[0m03:48:22.784769 [info ] [Dummy-1   ]: Done. PASS=3 WARN=0 ERROR=0 SKIP=0 NO-OP=0 TOTAL=3
+[0m03:48:22.786224 [debug] [Dummy-1   ]: Resource report: {"command_name": "seed", "command_success": true, "command_wall_clock_time": 3.029516, "process_in_blocks": "0", "process_kernel_time": 0.8, "process_mem_max_rss": "411096", "process_out_blocks": "0", "process_user_time": 4.51}
+[0m03:48:22.786838 [debug] [Dummy-1   ]: Command `cli seed` succeeded at 03:48:22.786599 after 3.03 seconds
+[0m03:48:22.787316 [debug] [Dummy-1   ]: Flushing usage events
+
+
+============================== 06:13:00.404623 | 5c7158c4-6f22-4d88-b520-1775e033b027 ==============================
+[0m06:13:00.404623 [info ] [Dummy-1   ]: Running with dbt=1.10.15
+[0m06:13:00.405619 [debug] [Dummy-1   ]: running dbt with arguments {'quiet': 'False', 'fail_fast': 'False', 'warn_error': 'None', 'target_path': '/tmp/dbt/target/', 'introspect': 'True', 'send_anonymous_usage_stats': 'False', 'version_check': 'True', 'use_colors': 'True', 'invocation_command': 'dbt ', 'cache_selected_only': 'False', 'debug': 'False', 'printer_width': '80', 'profiles_dir': '/tmp/dbt/', 'empty': 'False', 'log_cache_events': 'False', 'log_format': 'default', 'write_json': 'True', 'use_experimental_parser': 'False', 'indirect_selection': 'eager', 'no_print': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'partial_parse': 'True', 'log_path': '/tmp/dbt/logs', 'static_parser': 'True'}
+[0m06:13:00.644911 [info ] [Dummy-1   ]: Registered adapter: snowflake=1.10.3
+[0m06:13:00.910916 [debug] [Dummy-1   ]: checksum: 0f45fdd67cc51382d6521f874e757e7afa214ac7bb0178b13f1819cbe813499c, vars: {}, profile: , target: dev, version: 1.10.15
+[0m06:13:01.110154 [debug] [Dummy-1   ]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m06:13:01.110728 [debug] [Dummy-1   ]: Partial parsing enabled, no changes found, skipping parsing
+[0m06:13:01.324499 [debug] [Dummy-1   ]: Wrote artifact WritableManifest to /tmp/dbt/target/manifest.json
+[0m06:13:01.326546 [debug] [Dummy-1   ]: Wrote artifact SemanticManifest to /tmp/dbt/target/semantic_manifest.json
+[0m06:13:01.369121 [info ] [Dummy-1   ]: Found 8 models, 2 snapshots, 1 analysis, 39 data tests, 3 seeds, 489 macros
+[0m06:13:01.372395 [info ] [Dummy-1   ]: 
+[0m06:13:01.372913 [info ] [Dummy-1   ]: Concurrency: 4 threads (target='dev')
+[0m06:13:01.373305 [info ] [Dummy-1   ]: 
+[0m06:13:01.374007 [debug] [Dummy-1   ]: Acquiring new snowflake connection 'master'
+[0m06:13:01.376166 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_DBT_TEST'
+[0m06:13:01.457278 [debug] [ThreadPool]: Using snowflake connection "list_DBT_TEST"
+[0m06:13:01.457829 [debug] [ThreadPool]: On list_DBT_TEST: show terse schemas in database DBT_TEST
+    limit 10000
+/* {"app": "dbt", "dbt_version": "1.10.15", "profile_name": "dbt_learning_project", "target_name": "dev", "connection_name": "list_DBT_TEST"} */
+[0m06:13:01.458337 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m06:13:02.728909 [debug] [ThreadPool]: SQL status: SUCCESS 4 in 1.270 seconds
+[0m06:13:02.731143 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_DBT_TEST, now create_DBT_TEST_staging)
+[0m06:13:02.731795 [debug] [ThreadPool]: Creating schema "database: "DBT_TEST"
+schema: "staging"
+"
+[0m06:13:02.798718 [debug] [ThreadPool]: Using snowflake connection "create_DBT_TEST_staging"
+[0m06:13:02.799252 [debug] [ThreadPool]: On create_DBT_TEST_staging: create schema if not exists DBT_TEST.staging
+/* {"app": "dbt", "dbt_version": "1.10.15", "profile_name": "dbt_learning_project", "target_name": "dev", "connection_name": "create_DBT_TEST_staging"} */
+[0m06:13:02.799652 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m06:13:05.043754 [debug] [ThreadPool]: SQL status: SUCCESS 1 in 2.244 seconds
+[0m06:13:05.050784 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly create_DBT_TEST_staging, now list_DBT_TEST_raw)
+[0m06:13:05.051836 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_DBT_TEST_marts'
+[0m06:13:05.052818 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_DBT_TEST_snapshots'
+[0m06:13:05.059887 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_DBT_TEST_staging'
+[0m06:13:05.068116 [debug] [ThreadPool]: Using snowflake connection "list_DBT_TEST_raw"
+[0m06:13:05.071867 [debug] [ThreadPool]: Using snowflake connection "list_DBT_TEST_marts"
+[0m06:13:05.075267 [debug] [ThreadPool]: Using snowflake connection "list_DBT_TEST_snapshots"
+[0m06:13:05.079844 [debug] [ThreadPool]: Using snowflake connection "list_DBT_TEST_staging"
+[0m06:13:05.080353 [debug] [ThreadPool]: On list_DBT_TEST_raw: show objects in DBT_TEST.raw
+    limit 10000
+    
+
+/* {"app": "dbt", "dbt_version": "1.10.15", "profile_name": "dbt_learning_project", "target_name": "dev", "connection_name": "list_DBT_TEST_raw"} */;
+[0m06:13:05.080813 [debug] [ThreadPool]: On list_DBT_TEST_marts: show objects in DBT_TEST.marts
+    limit 10000
+    
+
+/* {"app": "dbt", "dbt_version": "1.10.15", "profile_name": "dbt_learning_project", "target_name": "dev", "connection_name": "list_DBT_TEST_marts"} */;
+[0m06:13:05.081256 [debug] [ThreadPool]: On list_DBT_TEST_snapshots: show objects in DBT_TEST.snapshots
+    limit 10000
+    
+
+/* {"app": "dbt", "dbt_version": "1.10.15", "profile_name": "dbt_learning_project", "target_name": "dev", "connection_name": "list_DBT_TEST_snapshots"} */;
+[0m06:13:05.081689 [debug] [ThreadPool]: On list_DBT_TEST_staging: show objects in DBT_TEST.staging
+    limit 10000
+    
+
+/* {"app": "dbt", "dbt_version": "1.10.15", "profile_name": "dbt_learning_project", "target_name": "dev", "connection_name": "list_DBT_TEST_staging"} */;
+[0m06:13:05.082136 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m06:13:05.082525 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m06:13:05.082892 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m06:13:05.083310 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m06:13:06.614065 [debug] [ThreadPool]: SQL status: SUCCESS 0 in 1.531 seconds
+[0m06:13:06.632952 [debug] [ThreadPool]: Snowflake adapter: Snowflake query id: 01c4cd79-000d-c22e-0000-22e5000bebb6
+[0m06:13:06.633457 [debug] [ThreadPool]: Snowflake adapter: Snowflake error: 002043 (02000): SQL compilation error:
+Object does not exist, or operation cannot be performed.
+[0m06:13:06.633991 [debug] [ThreadPool]: Snowflake adapter: Error running SQL: macro list_relations_without_caching
+[0m06:13:06.634405 [debug] [ThreadPool]: Snowflake adapter: Rolling back transaction.
+[0m06:13:06.671006 [debug] [ThreadPool]: Snowflake adapter: Snowflake query id: 01c4cd79-000d-c22e-0000-22e5000bebbe
+[0m06:13:06.671498 [debug] [ThreadPool]: Snowflake adapter: Snowflake error: 002043 (02000): SQL compilation error:
+Object does not exist, or operation cannot be performed.
+[0m06:13:06.672018 [debug] [ThreadPool]: Snowflake adapter: Error running SQL: macro list_relations_without_caching
+[0m06:13:06.672435 [debug] [ThreadPool]: Snowflake adapter: Rolling back transaction.
+[0m06:13:06.852965 [debug] [ThreadPool]: SQL status: SUCCESS 8 in 1.771 seconds
+[0m06:13:06.863233 [debug] [Thread-2 (]: Began running node model.dbt_learning_project.stg_customers
+[0m06:13:06.863955 [info ] [Thread-2 (]: 1 of 1 START sql view model staging.stg_customers .............................. [RUN]
+[0m06:13:06.864608 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly list_DBT_TEST_raw, now model.dbt_learning_project.stg_customers)
+[0m06:13:06.865105 [debug] [Thread-2 (]: Began compiling node model.dbt_learning_project.stg_customers
+[0m06:13:06.876957 [debug] [Thread-2 (]: Writing injected SQL for node "model.dbt_learning_project.stg_customers"
+[0m06:13:06.877708 [debug] [Thread-2 (]: Began executing node model.dbt_learning_project.stg_customers
+[0m06:13:06.917226 [debug] [Thread-2 (]: Writing runtime sql for node "model.dbt_learning_project.stg_customers"
+[0m06:13:06.918710 [debug] [Thread-2 (]: Using snowflake connection "model.dbt_learning_project.stg_customers"
+[0m06:13:06.919305 [debug] [Thread-2 (]: On model.dbt_learning_project.stg_customers: create or replace   view DBT_TEST.staging.stg_customers
+  
+  
+  
+  
+  as (
+    -- ============================================================
+-- MATERIALIZATION: VIEW  (set at folder level in dbt_project.yml)
+-- WHY: Staging models are cheap SELECT transforms; we want
+--      them always fresh without storing redundant data.
+-- ============================================================
+
+
+
+with source as (
+
+    -- ref() builds the DAG dependency on the seed
+    select * from DBT_TEST.raw.raw_customers
+
+),
+
+renamed as (
+
+    select
+        customer_id,
+        first_name,
+        last_name,
+        -- Macro call: clean + lowercase email
+        
+    lower(trim(email))
+          as email,
+        upper(country)                       as country,
+        cast(signup_date  as date)           as signup_date,
+        cast(updated_at   as timestamp)      as updated_at,
+        -- Macro call: generate a surrogate key
+        
+    md5(
+        concat_ws('|',
+            
+                cast(customer_id as varchar)
+                
+            
+        )
+    )
+ as customer_sk
+
+    from source
+
+)
+
+select * from renamed
+  )
+/* {"app": "dbt", "dbt_version": "1.10.15", "profile_name": "dbt_learning_project", "target_name": "dev", "node_id": "model.dbt_learning_project.stg_customers"} */;
+[0m06:13:06.919826 [debug] [Thread-2 (]: Opening a new connection, currently in state init
+[0m06:13:08.062629 [debug] [Thread-2 (]: SQL status: SUCCESS 1 in 1.143 seconds
+[0m06:13:08.086596 [info ] [Thread-2 (]: 1 of 1 OK created sql view model staging.stg_customers ......................... [[32mSUCCESS 1[0m in 1.22s]
+[0m06:13:08.087365 [debug] [Thread-2 (]: Finished running node model.dbt_learning_project.stg_customers
+[0m06:13:08.089714 [debug] [Dummy-1   ]: Connection 'master' was properly closed.
+[0m06:13:08.090154 [debug] [Dummy-1   ]: Connection 'model.dbt_learning_project.stg_customers' was properly closed.
+[0m06:13:08.090531 [debug] [Dummy-1   ]: Connection 'list_DBT_TEST_marts' was properly closed.
+[0m06:13:08.090899 [debug] [Dummy-1   ]: Connection 'list_DBT_TEST_snapshots' was properly closed.
+[0m06:13:08.091278 [debug] [Dummy-1   ]: Connection 'list_DBT_TEST_staging' was properly closed.
+[0m06:13:08.091704 [info ] [Dummy-1   ]: 
+[0m06:13:08.092172 [info ] [Dummy-1   ]: Finished running 1 view model in 0 hours 0 minutes and 6.72 seconds (6.72s).
+[0m06:13:08.092913 [debug] [Dummy-1   ]: Command end result
+[0m06:13:08.123565 [debug] [Dummy-1   ]: Wrote artifact WritableManifest to /tmp/dbt/target/manifest.json
+[0m06:13:08.125287 [debug] [Dummy-1   ]: Wrote artifact SemanticManifest to /tmp/dbt/target/semantic_manifest.json
+[0m06:13:08.131226 [debug] [Dummy-1   ]: Wrote artifact RunExecutionResult to /tmp/dbt/target/run_results.json
+[0m06:13:08.131643 [info ] [Dummy-1   ]: 
+[0m06:13:08.132198 [info ] [Dummy-1   ]: [32mCompleted successfully[0m
+[0m06:13:08.132611 [info ] [Dummy-1   ]: 
+[0m06:13:08.133062 [info ] [Dummy-1   ]: Done. PASS=1 WARN=0 ERROR=0 SKIP=0 NO-OP=0 TOTAL=1
+[0m06:13:08.134564 [debug] [Dummy-1   ]: Resource report: {"command_name": "run", "command_success": true, "command_wall_clock_time": 7.785585, "process_in_blocks": "0", "process_kernel_time": 0.93, "process_mem_max_rss": "415528", "process_out_blocks": "0", "process_user_time": 4.39}
+[0m06:13:08.135204 [debug] [Dummy-1   ]: Command `cli run` succeeded at 06:13:08.134939 after 7.79 seconds
+[0m06:13:08.135692 [debug] [Dummy-1   ]: Flushing usage events
+
+
+============================== 06:16:32.439824 | beb407af-ca13-41f6-97be-ddc395af0a5d ==============================
+[0m06:16:32.439824 [info ] [Dummy-1   ]: Running with dbt=1.10.15
+[0m06:16:32.440592 [debug] [Dummy-1   ]: running dbt with arguments {'cache_selected_only': 'False', 'log_format': 'default', 'version_check': 'True', 'static_parser': 'True', 'warn_error': 'None', 'invocation_command': 'dbt ', 'introspect': 'True', 'use_experimental_parser': 'False', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'log_cache_events': 'False', 'empty': 'False', 'log_path': '/tmp/dbt/logs', 'fail_fast': 'False', 'debug': 'False', 'partial_parse': 'True', 'printer_width': '80', 'write_json': 'True', 'indirect_selection': 'eager', 'target_path': '/tmp/dbt/target/', 'use_colors': 'True', 'send_anonymous_usage_stats': 'False', 'quiet': 'False', 'profiles_dir': '/tmp/dbt/', 'no_print': 'None'}
+[0m06:16:32.678934 [info ] [Dummy-1   ]: Registered adapter: snowflake=1.10.3
+[0m06:16:32.943002 [debug] [Dummy-1   ]: checksum: 0f45fdd67cc51382d6521f874e757e7afa214ac7bb0178b13f1819cbe813499c, vars: {}, profile: , target: dev, version: 1.10.15
+[0m06:16:33.139941 [debug] [Dummy-1   ]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m06:16:33.140453 [debug] [Dummy-1   ]: Partial parsing enabled, no changes found, skipping parsing
+[0m06:16:33.351770 [debug] [Dummy-1   ]: Wrote artifact WritableManifest to /tmp/dbt/target/manifest.json
+[0m06:16:33.353619 [debug] [Dummy-1   ]: Wrote artifact SemanticManifest to /tmp/dbt/target/semantic_manifest.json
+[0m06:16:33.395188 [info ] [Dummy-1   ]: Found 8 models, 2 snapshots, 1 analysis, 39 data tests, 3 seeds, 489 macros
+[0m06:16:33.397688 [info ] [Dummy-1   ]: 
+[0m06:16:33.398220 [info ] [Dummy-1   ]: Concurrency: 4 threads (target='dev')
+[0m06:16:33.398672 [info ] [Dummy-1   ]: 
+[0m06:16:33.399375 [debug] [Dummy-1   ]: Acquiring new snowflake connection 'master'
+[0m06:16:33.404492 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_DBT_TEST'
+[0m06:16:33.482872 [debug] [ThreadPool]: Using snowflake connection "list_DBT_TEST"
+[0m06:16:33.483390 [debug] [ThreadPool]: On list_DBT_TEST: show terse schemas in database DBT_TEST
+    limit 10000
+/* {"app": "dbt", "dbt_version": "1.10.15", "profile_name": "dbt_learning_project", "target_name": "dev", "connection_name": "list_DBT_TEST"} */
+[0m06:16:33.483845 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m06:16:33.740689 [debug] [ThreadPool]: SQL status: SUCCESS 5 in 0.257 seconds
+[0m06:16:33.744693 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_DBT_TEST_raw'
+[0m06:16:33.745684 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_DBT_TEST, now list_DBT_TEST_staging)
+[0m06:16:33.810169 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_DBT_TEST_snapshots'
+[0m06:16:33.823276 [debug] [ThreadPool]: Using snowflake connection "list_DBT_TEST_raw"
+[0m06:16:33.824129 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_DBT_TEST_marts'
+[0m06:16:33.827758 [debug] [ThreadPool]: Using snowflake connection "list_DBT_TEST_staging"
+[0m06:16:33.831334 [debug] [ThreadPool]: Using snowflake connection "list_DBT_TEST_snapshots"
+[0m06:16:33.831838 [debug] [ThreadPool]: On list_DBT_TEST_raw: show objects in DBT_TEST.raw
+    limit 10000
+    
+
+/* {"app": "dbt", "dbt_version": "1.10.15", "profile_name": "dbt_learning_project", "target_name": "dev", "connection_name": "list_DBT_TEST_raw"} */;
+[0m06:16:33.835142 [debug] [ThreadPool]: Using snowflake connection "list_DBT_TEST_marts"
+[0m06:16:33.835607 [debug] [ThreadPool]: On list_DBT_TEST_staging: show objects in DBT_TEST.staging
+    limit 10000
+    
+
+/* {"app": "dbt", "dbt_version": "1.10.15", "profile_name": "dbt_learning_project", "target_name": "dev", "connection_name": "list_DBT_TEST_staging"} */;
+[0m06:16:33.836075 [debug] [ThreadPool]: On list_DBT_TEST_snapshots: show objects in DBT_TEST.snapshots
+    limit 10000
+    
+
+/* {"app": "dbt", "dbt_version": "1.10.15", "profile_name": "dbt_learning_project", "target_name": "dev", "connection_name": "list_DBT_TEST_snapshots"} */;
+[0m06:16:33.836523 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m06:16:33.836990 [debug] [ThreadPool]: On list_DBT_TEST_marts: show objects in DBT_TEST.marts
+    limit 10000
+    
+
+/* {"app": "dbt", "dbt_version": "1.10.15", "profile_name": "dbt_learning_project", "target_name": "dev", "connection_name": "list_DBT_TEST_marts"} */;
+[0m06:16:33.837420 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m06:16:33.837830 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m06:16:33.838443 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m06:16:34.107415 [debug] [ThreadPool]: Snowflake adapter: Snowflake query id: 01c4cd7c-000d-c22e-0000-22e5000bed82
+[0m06:16:34.108271 [debug] [ThreadPool]: Snowflake adapter: Snowflake query id: 01c4cd7c-000d-c22e-0000-22e5000bed76
+[0m06:16:34.108765 [debug] [ThreadPool]: Snowflake adapter: Snowflake error: 002043 (02000): SQL compilation error:
+Object does not exist, or operation cannot be performed.
+[0m06:16:34.109286 [debug] [ThreadPool]: Snowflake adapter: Snowflake error: 002043 (02000): SQL compilation error:
+Object does not exist, or operation cannot be performed.
+[0m06:16:34.109846 [debug] [ThreadPool]: Snowflake adapter: Error running SQL: macro list_relations_without_caching
+[0m06:16:34.110395 [debug] [ThreadPool]: Snowflake adapter: Error running SQL: macro list_relations_without_caching
+[0m06:16:34.110881 [debug] [ThreadPool]: Snowflake adapter: Rolling back transaction.
+[0m06:16:34.111346 [debug] [ThreadPool]: Snowflake adapter: Rolling back transaction.
+[0m06:16:34.114890 [debug] [ThreadPool]: SQL status: SUCCESS 8 in 0.278 seconds
+[0m06:16:34.115685 [debug] [ThreadPool]: SQL status: SUCCESS 1 in 0.278 seconds
+[0m06:16:34.127386 [debug] [Thread-2 (]: Began running node model.dbt_learning_project.stg_customers
+[0m06:16:34.127986 [debug] [Thread-3 (]: Began running node model.dbt_learning_project.stg_events
+[0m06:16:34.128603 [debug] [Thread-4 (]: Began running node model.dbt_learning_project.stg_orders
+[0m06:16:34.129284 [info ] [Thread-2 (]: 1 of 3 START sql view model staging.stg_customers .............................. [RUN]
+[0m06:16:34.129995 [info ] [Thread-3 (]: 2 of 3 START sql view model staging.stg_events ................................. [RUN]
+[0m06:16:34.130643 [info ] [Thread-4 (]: 3 of 3 START sql view model staging.stg_orders ................................. [RUN]
+[0m06:16:34.131264 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly list_DBT_TEST_raw, now model.dbt_learning_project.stg_customers)
+[0m06:16:34.131800 [debug] [Thread-3 (]: Re-using an available connection from the pool (formerly list_DBT_TEST_staging, now model.dbt_learning_project.stg_events)
+[0m06:16:34.132333 [debug] [Thread-4 (]: Re-using an available connection from the pool (formerly list_DBT_TEST_snapshots, now model.dbt_learning_project.stg_orders)
+[0m06:16:34.132848 [debug] [Thread-2 (]: Began compiling node model.dbt_learning_project.stg_customers
+[0m06:16:34.133321 [debug] [Thread-3 (]: Began compiling node model.dbt_learning_project.stg_events
+[0m06:16:34.133778 [debug] [Thread-4 (]: Began compiling node model.dbt_learning_project.stg_orders
+[0m06:16:34.145370 [debug] [Thread-2 (]: Writing injected SQL for node "model.dbt_learning_project.stg_customers"
+[0m06:16:34.149824 [debug] [Thread-3 (]: Writing injected SQL for node "model.dbt_learning_project.stg_events"
+[0m06:16:34.155194 [debug] [Thread-4 (]: Writing injected SQL for node "model.dbt_learning_project.stg_orders"
+[0m06:16:34.156224 [debug] [Thread-2 (]: Began executing node model.dbt_learning_project.stg_customers
+[0m06:16:34.156959 [debug] [Thread-3 (]: Began executing node model.dbt_learning_project.stg_events
+[0m06:16:34.173639 [debug] [Thread-4 (]: Began executing node model.dbt_learning_project.stg_orders
+[0m06:16:34.204518 [debug] [Thread-2 (]: Writing runtime sql for node "model.dbt_learning_project.stg_customers"
+[0m06:16:34.219663 [debug] [Thread-3 (]: Writing runtime sql for node "model.dbt_learning_project.stg_events"
+[0m06:16:34.223285 [debug] [Thread-4 (]: Writing runtime sql for node "model.dbt_learning_project.stg_orders"
+[0m06:16:34.225078 [debug] [Thread-2 (]: Using snowflake connection "model.dbt_learning_project.stg_customers"
+[0m06:16:34.226434 [debug] [Thread-3 (]: Using snowflake connection "model.dbt_learning_project.stg_events"
+[0m06:16:34.227160 [debug] [Thread-2 (]: On model.dbt_learning_project.stg_customers: create or replace   view DBT_TEST.staging.stg_customers
+  
+  
+  
+  
+  as (
+    -- ============================================================
+-- MATERIALIZATION: VIEW  (set at folder level in dbt_project.yml)
+-- WHY: Staging models are cheap SELECT transforms; we want
+--      them always fresh without storing redundant data.
+-- ============================================================
+
+
+
+with source as (
+
+    -- ref() builds the DAG dependency on the seed
+    select * from DBT_TEST.raw.raw_customers
+
+),
+
+renamed as (
+
+    select
+        customer_id,
+        first_name,
+        last_name,
+        -- Macro call: clean + lowercase email
+        
+    lower(trim(email))
+          as email,
+        upper(country)                       as country,
+        cast(signup_date  as date)           as signup_date,
+        cast(updated_at   as timestamp)      as updated_at,
+        -- Macro call: generate a surrogate key
+        
+    md5(
+        concat_ws('|',
+            
+                cast(customer_id as varchar)
+                
+            
+        )
+    )
+ as customer_sk
+
+    from source
+
+)
+
+select * from renamed
+  )
+/* {"app": "dbt", "dbt_version": "1.10.15", "profile_name": "dbt_learning_project", "target_name": "dev", "node_id": "model.dbt_learning_project.stg_customers"} */;
+[0m06:16:34.228481 [debug] [Thread-4 (]: Using snowflake connection "model.dbt_learning_project.stg_orders"
+[0m06:16:34.229039 [debug] [Thread-3 (]: On model.dbt_learning_project.stg_events: create or replace   view DBT_TEST.staging.stg_events
+  
+  
+  
+  
+  as (
+    -- ============================================================
+-- MATERIALIZATION: VIEW
+-- ============================================================
+
+
+
+with source as (
+
+    select * from DBT_TEST.raw.raw_events
+
+),
+
+parsed as (
+
+    select
+        event_id,
+        customer_id,
+        lower(event_type)               as event_type,
+        cast(event_ts   as timestamp)   as event_ts,
+        page,
+        cast(updated_at as timestamp)   as updated_at,
+        -- Extract date part for partitioning in incremental model
+        cast(event_ts   as date)        as event_date
+
+    from source
+
+)
+
+select * from parsed
+  )
+/* {"app": "dbt", "dbt_version": "1.10.15", "profile_name": "dbt_learning_project", "target_name": "dev", "node_id": "model.dbt_learning_project.stg_events"} */;
+[0m06:16:34.229592 [debug] [Thread-2 (]: Opening a new connection, currently in state init
+[0m06:16:34.230129 [debug] [Thread-4 (]: On model.dbt_learning_project.stg_orders: create or replace   view DBT_TEST.staging.stg_orders
+  
+  
+  
+  
+  as (
+    -- ============================================================
+-- MATERIALIZATION: VIEW
+-- ============================================================
+
+
+
+with source as (
+
+    select * from DBT_TEST.raw.raw_orders
+
+),
+
+cleaned as (
+
+    select
+        order_id,
+        customer_id,
+        cast(order_date  as date)      as order_date,
+        lower(status)                  as status,
+        cast(amount      as numeric)   as amount,
+        cast(updated_at  as timestamp) as updated_at,
+
+        -- Label orders using a custom macro
+        
+    case
+        when amount >= 400  then 'Large'
+        when amount >= 150  then 'Medium'
+        else                               'Small'
+    end
+ as order_size
+
+    from source
+
+)
+
+select * from cleaned
+  )
+/* {"app": "dbt", "dbt_version": "1.10.15", "profile_name": "dbt_learning_project", "target_name": "dev", "node_id": "model.dbt_learning_project.stg_orders"} */;
+[0m06:16:34.230620 [debug] [Thread-3 (]: Opening a new connection, currently in state init
+[0m06:16:34.231323 [debug] [Thread-4 (]: Opening a new connection, currently in state init
+[0m06:16:34.582772 [debug] [Thread-4 (]: SQL status: SUCCESS 1 in 0.351 seconds
+[0m06:16:34.583586 [debug] [Thread-3 (]: SQL status: SUCCESS 1 in 0.353 seconds
+[0m06:16:34.584335 [debug] [Thread-2 (]: SQL status: SUCCESS 1 in 0.355 seconds
+[0m06:16:34.613134 [info ] [Thread-4 (]: 3 of 3 OK created sql view model staging.stg_orders ............................ [[32mSUCCESS 1[0m in 0.47s]
+[0m06:16:34.613859 [info ] [Thread-3 (]: 2 of 3 OK created sql view model staging.stg_events ............................ [[32mSUCCESS 1[0m in 0.48s]
+[0m06:16:34.614550 [info ] [Thread-2 (]: 1 of 3 OK created sql view model staging.stg_customers ......................... [[32mSUCCESS 1[0m in 0.48s]
+[0m06:16:34.615311 [debug] [Thread-4 (]: Finished running node model.dbt_learning_project.stg_orders
+[0m06:16:34.615976 [debug] [Thread-3 (]: Finished running node model.dbt_learning_project.stg_events
+[0m06:16:34.616664 [debug] [Thread-2 (]: Finished running node model.dbt_learning_project.stg_customers
+[0m06:16:34.619657 [debug] [Dummy-1   ]: Connection 'master' was properly closed.
+[0m06:16:34.620406 [debug] [Dummy-1   ]: Connection 'model.dbt_learning_project.stg_events' was properly closed.
+[0m06:16:34.620855 [debug] [Dummy-1   ]: Connection 'model.dbt_learning_project.stg_customers' was properly closed.
+[0m06:16:34.621257 [debug] [Dummy-1   ]: Connection 'model.dbt_learning_project.stg_orders' was properly closed.
+[0m06:16:34.621630 [debug] [Dummy-1   ]: Connection 'list_DBT_TEST_marts' was properly closed.
+[0m06:16:34.622119 [info ] [Dummy-1   ]: 
+[0m06:16:34.622570 [info ] [Dummy-1   ]: Finished running 3 view models in 0 hours 0 minutes and 1.22 seconds (1.22s).
+[0m06:16:34.623561 [debug] [Dummy-1   ]: Command end result
+[0m06:16:34.655038 [debug] [Dummy-1   ]: Wrote artifact WritableManifest to /tmp/dbt/target/manifest.json
+[0m06:16:34.656754 [debug] [Dummy-1   ]: Wrote artifact SemanticManifest to /tmp/dbt/target/semantic_manifest.json
+[0m06:16:34.662794 [debug] [Dummy-1   ]: Wrote artifact RunExecutionResult to /tmp/dbt/target/run_results.json
+[0m06:16:34.663336 [info ] [Dummy-1   ]: 
+[0m06:16:34.663920 [info ] [Dummy-1   ]: [32mCompleted successfully[0m
+[0m06:16:34.664349 [info ] [Dummy-1   ]: 
+[0m06:16:34.664807 [info ] [Dummy-1   ]: Done. PASS=3 WARN=0 ERROR=0 SKIP=0 NO-OP=0 TOTAL=3
+[0m06:16:34.666180 [debug] [Dummy-1   ]: Resource report: {"command_name": "run", "command_success": true, "command_wall_clock_time": 2.2822099, "process_in_blocks": "0", "process_kernel_time": 0.9, "process_mem_max_rss": "414552", "process_out_blocks": "0", "process_user_time": 4.37}
+[0m06:16:34.666765 [debug] [Dummy-1   ]: Command `cli run` succeeded at 06:16:34.666533 after 2.28 seconds
+[0m06:16:34.667240 [debug] [Dummy-1   ]: Flushing usage events
+
+
+============================== 11:53:30.646929 | f1f1d322-96f5-4bae-901d-035792311c74 ==============================
+[0m11:53:30.646929 [info ] [Dummy-1   ]: Running with dbt=1.10.15
+[0m11:53:30.647737 [debug] [Dummy-1   ]: running dbt with arguments {'log_path': '/tmp/dbt/logs', 'indirect_selection': 'eager', 'version_check': 'True', 'no_print': 'None', 'static_parser': 'True', 'cache_selected_only': 'False', 'log_cache_events': 'False', 'warn_error': 'None', 'use_colors': 'True', 'use_experimental_parser': 'False', 'log_format': 'default', 'write_json': 'True', 'printer_width': '80', 'target_path': '/tmp/dbt/target/', 'introspect': 'True', 'quiet': 'False', 'invocation_command': 'dbt ', 'empty': 'False', 'debug': 'False', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'fail_fast': 'False', 'send_anonymous_usage_stats': 'False', 'partial_parse': 'True', 'profiles_dir': '/tmp/dbt/'}
+[0m11:53:30.890970 [info ] [Dummy-1   ]: Registered adapter: snowflake=1.10.3
+[0m11:53:31.160542 [debug] [Dummy-1   ]: checksum: 0f45fdd67cc51382d6521f874e757e7afa214ac7bb0178b13f1819cbe813499c, vars: {}, profile: , target: dev, version: 1.10.15
+[0m11:53:31.357936 [debug] [Dummy-1   ]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m11:53:31.358579 [debug] [Dummy-1   ]: Partial parsing enabled, no changes found, skipping parsing
+[0m11:53:31.570975 [debug] [Dummy-1   ]: Wrote artifact WritableManifest to /tmp/dbt/target/manifest.json
+[0m11:53:31.572934 [debug] [Dummy-1   ]: Wrote artifact SemanticManifest to /tmp/dbt/target/semantic_manifest.json
+[0m11:53:31.614847 [info ] [Dummy-1   ]: Found 8 models, 2 snapshots, 1 analysis, 39 data tests, 3 seeds, 489 macros
+[0m11:53:31.617349 [info ] [Dummy-1   ]: 
+[0m11:53:31.617826 [info ] [Dummy-1   ]: Concurrency: 4 threads (target='dev')
+[0m11:53:31.618302 [info ] [Dummy-1   ]: 
+[0m11:53:31.619010 [debug] [Dummy-1   ]: Acquiring new snowflake connection 'master'
+[0m11:53:31.624464 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_DBT_TEST'
+[0m11:53:31.705312 [debug] [ThreadPool]: Using snowflake connection "list_DBT_TEST"
+[0m11:53:31.705873 [debug] [ThreadPool]: On list_DBT_TEST: show terse schemas in database DBT_TEST
+    limit 10000
+/* {"app": "dbt", "dbt_version": "1.10.15", "profile_name": "dbt_learning_project", "target_name": "dev", "connection_name": "list_DBT_TEST"} */
+[0m11:53:31.706354 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m11:53:32.068258 [debug] [ThreadPool]: SQL status: SUCCESS 5 in 0.362 seconds
+[0m11:53:32.070563 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_DBT_TEST, now create_DBT_TEST_marts)
+[0m11:53:32.071253 [debug] [ThreadPool]: Creating schema "database: "DBT_TEST"
+schema: "marts"
+"
+[0m11:53:32.140394 [debug] [ThreadPool]: Using snowflake connection "create_DBT_TEST_marts"
+[0m11:53:32.140977 [debug] [ThreadPool]: On create_DBT_TEST_marts: create schema if not exists DBT_TEST.marts
+/* {"app": "dbt", "dbt_version": "1.10.15", "profile_name": "dbt_learning_project", "target_name": "dev", "connection_name": "create_DBT_TEST_marts"} */
+[0m11:53:32.141440 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m11:53:32.395078 [debug] [ThreadPool]: SQL status: SUCCESS 1 in 0.254 seconds
+[0m11:53:32.398859 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_DBT_TEST_staging'
+[0m11:53:32.399901 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly create_DBT_TEST_marts, now list_DBT_TEST_raw)
+[0m11:53:32.406164 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_DBT_TEST_marts'
+[0m11:53:32.415267 [debug] [ThreadPool]: Using snowflake connection "list_DBT_TEST_staging"
+[0m11:53:32.416552 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_DBT_TEST_snapshots'
+[0m11:53:32.420352 [debug] [ThreadPool]: Using snowflake connection "list_DBT_TEST_raw"
+[0m11:53:32.423790 [debug] [ThreadPool]: Using snowflake connection "list_DBT_TEST_marts"
+[0m11:53:32.424304 [debug] [ThreadPool]: On list_DBT_TEST_staging: show objects in DBT_TEST.staging
+    limit 10000
+    
+
+/* {"app": "dbt", "dbt_version": "1.10.15", "profile_name": "dbt_learning_project", "target_name": "dev", "connection_name": "list_DBT_TEST_staging"} */;
+[0m11:53:32.428983 [debug] [ThreadPool]: Using snowflake connection "list_DBT_TEST_snapshots"
+[0m11:53:32.429484 [debug] [ThreadPool]: On list_DBT_TEST_raw: show objects in DBT_TEST.raw
+    limit 10000
+    
+
+/* {"app": "dbt", "dbt_version": "1.10.15", "profile_name": "dbt_learning_project", "target_name": "dev", "connection_name": "list_DBT_TEST_raw"} */;
+[0m11:53:32.429961 [debug] [ThreadPool]: On list_DBT_TEST_marts: show objects in DBT_TEST.marts
+    limit 10000
+    
+
+/* {"app": "dbt", "dbt_version": "1.10.15", "profile_name": "dbt_learning_project", "target_name": "dev", "connection_name": "list_DBT_TEST_marts"} */;
+[0m11:53:32.430443 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m11:53:32.430915 [debug] [ThreadPool]: On list_DBT_TEST_snapshots: show objects in DBT_TEST.snapshots
+    limit 10000
+    
+
+/* {"app": "dbt", "dbt_version": "1.10.15", "profile_name": "dbt_learning_project", "target_name": "dev", "connection_name": "list_DBT_TEST_snapshots"} */;
+[0m11:53:32.431381 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m11:53:32.431826 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m11:53:32.432411 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m11:53:32.742174 [debug] [ThreadPool]: Snowflake adapter: Snowflake query id: 01c4cecd-000d-c22e-0000-22e5000c0106
+[0m11:53:32.742684 [debug] [ThreadPool]: Snowflake adapter: Snowflake error: 002043 (02000): SQL compilation error:
+Object does not exist, or operation cannot be performed.
+[0m11:53:32.743236 [debug] [ThreadPool]: Snowflake adapter: Error running SQL: macro list_relations_without_caching
+[0m11:53:32.743680 [debug] [ThreadPool]: Snowflake adapter: Rolling back transaction.
+[0m11:53:32.769299 [debug] [ThreadPool]: SQL status: SUCCESS 0 in 0.337 seconds
+[0m11:53:32.780102 [debug] [ThreadPool]: SQL status: SUCCESS 3 in 0.350 seconds
+[0m11:53:32.786158 [debug] [ThreadPool]: SQL status: SUCCESS 8 in 0.355 seconds
+[0m11:53:32.796295 [debug] [Thread-2 (]: Began running node model.dbt_learning_project.dim_customers
+[0m11:53:32.796896 [debug] [Thread-3 (]: Began running node model.dbt_learning_project.fct_daily_revenue_incremental
+[0m11:53:32.797606 [info ] [Thread-2 (]: 1 of 4 START sql table model marts.dim_customers ............................... [RUN]
+[0m11:53:32.798342 [info ] [Thread-3 (]: 2 of 4 START sql incremental model marts.fct_daily_revenue_incremental ......... [RUN]
+[0m11:53:32.798998 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly list_DBT_TEST_staging, now model.dbt_learning_project.dim_customers)
+[0m11:53:32.799591 [debug] [Thread-3 (]: Re-using an available connection from the pool (formerly list_DBT_TEST_raw, now model.dbt_learning_project.fct_daily_revenue_incremental)
+[0m11:53:32.800113 [debug] [Thread-2 (]: Began compiling node model.dbt_learning_project.dim_customers
+[0m11:53:32.800619 [debug] [Thread-3 (]: Began compiling node model.dbt_learning_project.fct_daily_revenue_incremental
+[0m11:53:32.815284 [debug] [Thread-2 (]: Writing injected SQL for node "model.dbt_learning_project.dim_customers"
+[0m11:53:32.824755 [debug] [Thread-3 (]: Writing injected SQL for node "model.dbt_learning_project.fct_daily_revenue_incremental"
+[0m11:53:32.837279 [debug] [Thread-2 (]: Writing injected SQL for node "model.dbt_learning_project.dim_customers"
+[0m11:53:32.837879 [debug] [Thread-3 (]: Began executing node model.dbt_learning_project.fct_daily_revenue_incremental
+[0m11:53:32.860342 [debug] [Thread-2 (]: Began executing node model.dbt_learning_project.dim_customers
+[0m11:53:32.918258 [debug] [Thread-3 (]: Writing runtime sql for node "model.dbt_learning_project.fct_daily_revenue_incremental"
+[0m11:53:32.925530 [debug] [Thread-2 (]: Writing runtime sql for node "model.dbt_learning_project.dim_customers"
+[0m11:53:32.927410 [debug] [Thread-3 (]: Using snowflake connection "model.dbt_learning_project.fct_daily_revenue_incremental"
+[0m11:53:32.930181 [debug] [Thread-2 (]: Using snowflake connection "model.dbt_learning_project.dim_customers"
+[0m11:53:32.930791 [debug] [Thread-3 (]: On model.dbt_learning_project.fct_daily_revenue_incremental: create or replace transient table DBT_TEST.marts.fct_daily_revenue_incremental
+    
+    
+    
+    as (
+
+with orders as (
+
+    select *
+    from DBT_TEST.staging.stg_orders
+
+    
+
+),
+
+daily as (
+
+    select
+        order_date,
+
+        count(*) as total_orders,
+
+        sum(
+            case
+                when status = 'completed' then 1
+                else 0
+            end
+        ) as completed_orders,
+
+        sum(
+            case
+                when status = 'cancelled' then 1
+                else 0
+            end
+        ) as cancelled_orders,
+
+        coalesce(sum(amount), 0) as gross_revenue,
+
+        coalesce(
+            sum(
+                case
+                    when status = 'completed' then amount
+                    else 0
+                end
+            ),
+            0
+        ) as net_revenue,
+
+        avg(amount) as avg_order_value,
+
+        count(distinct customer_id) as unique_customers,
+
+        current_timestamp() as dbt_updated_at
+
+    from orders
+    group by order_date
+
+)
+
+select *
+from daily
+    )
+
+/* {"app": "dbt", "dbt_version": "1.10.15", "profile_name": "dbt_learning_project", "target_name": "dev", "node_id": "model.dbt_learning_project.fct_daily_revenue_incremental"} */;
+[0m11:53:32.931617 [debug] [Thread-2 (]: On model.dbt_learning_project.dim_customers: create or replace transient table DBT_TEST.marts.dim_customers
+    
+    
+    
+    as (-- ============================================================
+-- MATERIALIZATION: TABLE
+--
+-- WHY:  Dimension tables are queried heavily by BI tools.
+--       Materializing as a TABLE means the query is pre-run;
+--       end users get instant results.
+--
+-- WHEN TO USE:  Relatively static data, high query volume,
+--               or when downstream tools can't handle views.
+-- ============================================================
+
+
+
+with  __dbt__cte__int_customer_order_stats as (
+-- ============================================================
+-- MATERIALIZATION: EPHEMERAL
+--
+-- WHY:  Ephemeral models are NOT materialized in the DB at all.
+--       dbt inlines them as a CTE wherever they are ref()-ed.
+--       Perfect for intermediate transformation logic you want
+--       to reuse WITHOUT creating an extra table/view.
+--
+-- HOW:  Any model that calls  ref('int_customer_order_stats')
+--       gets this SQL inlined as a CTE — invisible to the DB.
+-- ============================================================
+
+
+
+with orders as (
+
+    select * from DBT_TEST.staging.stg_orders
+
+),
+
+agg as (
+
+    select
+        customer_id,
+        count(*)                                         as total_orders,
+        sum(amount)                                      as total_spend,
+        avg(amount)                                      as avg_order_value,
+        min(order_date)                                  as first_order_date,
+        max(order_date)                                  as last_order_date,
+        count(*) filter (where status = 'completed')    as completed_orders,
+        count(*) filter (where status = 'cancelled')    as cancelled_orders,
+
+        -- Days between first and last order (customer tenure)
+        (max(order_date) - min(order_date))              as days_active
+
+    from orders
+    group by 1
+
+)
+
+select * from agg
+), customers as (
+
+    select * from DBT_TEST.staging.stg_customers
+
+),
+
+-- ref() on an EPHEMERAL model → dbt inlines it as a CTE
+order_stats as (
+
+    select * from __dbt__cte__int_customer_order_stats
+
+),
+
+final as (
+
+    select
+        c.customer_sk,
+        c.customer_id,
+        c.first_name,
+        c.last_name,
+        c.email,
+        c.country,
+        c.signup_date,
+
+        -- Enrichment from ephemeral intermediate
+        coalesce(o.total_orders,      0)            as total_orders,
+        coalesce(o.total_spend,       0)            as lifetime_value,
+        coalesce(o.avg_order_value,   0)            as avg_order_value,
+        o.first_order_date,
+        o.last_order_date,
+        coalesce(o.completed_orders,  0)            as completed_orders,
+        coalesce(o.cancelled_orders,  0)            as cancelled_orders,
+
+        -- Derived: customer segment using a macro
+        
+    case
+        when o.total_spend >= 500 and o.total_orders >= 3  then 'VIP'
+        when o.total_spend >= 200                            then 'Regular'
+        when o.total_orders = 0 or o.total_spend is null   then 'New'
+        else                                                        'At-Risk'
+    end
+ as segment,
+
+        -- Metadata
+        current_timestamp                           as dbt_updated_at
+
+    from customers c
+    left join order_stats o using (customer_id)
+
+)
+
+select * from final
+    )
+
+/* {"app": "dbt", "dbt_version": "1.10.15", "profile_name": "dbt_learning_project", "target_name": "dev", "node_id": "model.dbt_learning_project.dim_customers"} */;
+[0m11:53:32.932268 [debug] [Thread-3 (]: Opening a new connection, currently in state init
+[0m11:53:32.932801 [debug] [Thread-2 (]: Opening a new connection, currently in state init
+[0m11:53:33.212830 [debug] [Thread-2 (]: Snowflake adapter: Snowflake query id: 01c4cecd-000d-c22e-0000-22e5000c013a
+[0m11:53:33.213453 [debug] [Thread-2 (]: Snowflake adapter: Snowflake error: 001003 (42000): SQL compilation error:
+syntax error line 48 at position 24 unexpected '('.
+syntax error line 48 at position 25 unexpected 'where'.
+syntax error line 48 at position 56 unexpected 'as'.
+syntax error line 49 at position 14 unexpected '*'.
+syntax error line 49 at position 17 unexpected 'filter'.
+syntax error line 49 at position 25 unexpected 'where'.
+syntax error line 49 at position 56 unexpected 'as'.
+[0m11:53:33.217207 [debug] [Thread-2 (]: Database Error in model dim_customers (models/marts/dim_customers.sql)
+  001003 (42000): SQL compilation error:
+  syntax error line 48 at position 24 unexpected '('.
+  syntax error line 48 at position 25 unexpected 'where'.
+  syntax error line 48 at position 56 unexpected 'as'.
+  syntax error line 49 at position 14 unexpected '*'.
+  syntax error line 49 at position 17 unexpected 'filter'.
+  syntax error line 49 at position 25 unexpected 'where'.
+  syntax error line 49 at position 56 unexpected 'as'.
+  compiled code at /tmp/dbt/target/run/dbt_learning_project/models/marts/dim_customers.sql
+[0m11:53:33.219662 [error] [Thread-2 (]: 1 of 4 ERROR creating sql table model marts.dim_customers ...................... [[31mERROR[0m in 0.42s]
+[0m11:53:33.220391 [debug] [Thread-2 (]: Finished running node model.dbt_learning_project.dim_customers
+[0m11:53:33.221123 [debug] [Thread-8 (]: Marking all children of 'model.dbt_learning_project.dim_customers' to be skipped because of status 'error'.  Reason: Database Error in model dim_customers (models/marts/dim_customers.sql)
+  001003 (42000): SQL compilation error:
+  syntax error line 48 at position 24 unexpected '('.
+  syntax error line 48 at position 25 unexpected 'where'.
+  syntax error line 48 at position 56 unexpected 'as'.
+  syntax error line 49 at position 14 unexpected '*'.
+  syntax error line 49 at position 17 unexpected 'filter'.
+  syntax error line 49 at position 25 unexpected 'where'.
+  syntax error line 49 at position 56 unexpected 'as'.
+  compiled code at /tmp/dbt/target/run/dbt_learning_project/models/marts/dim_customers.sql.
+[0m11:53:33.222637 [debug] [Thread-5 (]: Began running node model.dbt_learning_project.fct_events_incremental
+[0m11:53:33.223226 [debug] [Thread-4 (]: Began running node model.dbt_learning_project.fct_orders
+[0m11:53:33.223868 [info ] [Thread-5 (]: 3 of 4 SKIP relation marts.fct_events_incremental .............................. [[33mSKIP[0m]
+[0m11:53:33.224505 [info ] [Thread-4 (]: 4 of 4 SKIP relation marts.fct_orders .......................................... [[33mSKIP[0m]
+[0m11:53:33.225061 [debug] [Thread-5 (]: Finished running node model.dbt_learning_project.fct_events_incremental
+[0m11:53:33.225547 [debug] [Thread-4 (]: Finished running node model.dbt_learning_project.fct_orders
+[0m11:53:33.726187 [debug] [Thread-3 (]: SQL status: SUCCESS 1 in 0.794 seconds
+[0m11:53:33.738765 [debug] [Thread-3 (]: Applying DROP to: DBT_TEST.marts.fct_daily_revenue_incremental__dbt_tmp
+[0m11:53:33.753172 [debug] [Thread-3 (]: Using snowflake connection "model.dbt_learning_project.fct_daily_revenue_incremental"
+[0m11:53:33.753766 [debug] [Thread-3 (]: On model.dbt_learning_project.fct_daily_revenue_incremental: drop view if exists DBT_TEST.marts.fct_daily_revenue_incremental__dbt_tmp cascade
+/* {"app": "dbt", "dbt_version": "1.10.15", "profile_name": "dbt_learning_project", "target_name": "dev", "node_id": "model.dbt_learning_project.fct_daily_revenue_incremental"} */
+[0m11:53:33.784358 [debug] [Thread-3 (]: SQL status: SUCCESS 1 in 0.030 seconds
+[0m11:53:33.804483 [info ] [Thread-3 (]: 2 of 4 OK created sql incremental model marts.fct_daily_revenue_incremental .... [[32mSUCCESS 1[0m in 1.00s]
+[0m11:53:33.805207 [debug] [Thread-3 (]: Finished running node model.dbt_learning_project.fct_daily_revenue_incremental
+[0m11:53:33.807824 [debug] [Dummy-1   ]: Connection 'master' was properly closed.
+[0m11:53:33.808432 [debug] [Dummy-1   ]: Connection 'model.dbt_learning_project.fct_daily_revenue_incremental' was properly closed.
+[0m11:53:33.808848 [debug] [Dummy-1   ]: Connection 'model.dbt_learning_project.dim_customers' was properly closed.
+[0m11:53:33.809284 [debug] [Dummy-1   ]: Connection 'list_DBT_TEST_marts' was properly closed.
+[0m11:53:33.809668 [debug] [Dummy-1   ]: Connection 'list_DBT_TEST_snapshots' was properly closed.
+[0m11:53:33.810199 [info ] [Dummy-1   ]: 
+[0m11:53:33.810673 [info ] [Dummy-1   ]: Finished running 2 incremental models, 2 table models in 0 hours 0 minutes and 2.19 seconds (2.19s).
+[0m11:53:33.811662 [debug] [Dummy-1   ]: Command end result
+[0m11:53:33.843247 [debug] [Dummy-1   ]: Wrote artifact WritableManifest to /tmp/dbt/target/manifest.json
+[0m11:53:33.845000 [debug] [Dummy-1   ]: Wrote artifact SemanticManifest to /tmp/dbt/target/semantic_manifest.json
+[0m11:53:33.851093 [debug] [Dummy-1   ]: Wrote artifact RunExecutionResult to /tmp/dbt/target/run_results.json
+[0m11:53:33.851556 [info ] [Dummy-1   ]: 
+[0m11:53:33.852108 [info ] [Dummy-1   ]: [31mCompleted with 1 error, 0 partial successes, and 0 warnings:[0m
+[0m11:53:33.852595 [info ] [Dummy-1   ]: 
+[0m11:53:33.853181 [error] [Dummy-1   ]: [31mFailure in model dim_customers (models/marts/dim_customers.sql)[0m
+[0m11:53:33.853755 [error] [Dummy-1   ]:   Database Error in model dim_customers (models/marts/dim_customers.sql)
+  001003 (42000): SQL compilation error:
+  syntax error line 48 at position 24 unexpected '('.
+  syntax error line 48 at position 25 unexpected 'where'.
+  syntax error line 48 at position 56 unexpected 'as'.
+  syntax error line 49 at position 14 unexpected '*'.
+  syntax error line 49 at position 17 unexpected 'filter'.
+  syntax error line 49 at position 25 unexpected 'where'.
+  syntax error line 49 at position 56 unexpected 'as'.
+  compiled code at /tmp/dbt/target/run/dbt_learning_project/models/marts/dim_customers.sql
+[0m11:53:33.854176 [info ] [Dummy-1   ]: 
+[0m11:53:33.854633 [info ] [Dummy-1   ]:   compiled code at /tmp/dbt/target/compiled/dbt_learning_project/models/marts/dim_customers.sql
+[0m11:53:33.855043 [info ] [Dummy-1   ]: 
+[0m11:53:33.855482 [info ] [Dummy-1   ]: Done. PASS=1 WARN=0 ERROR=1 SKIP=2 NO-OP=0 TOTAL=4
+[0m11:53:33.856981 [debug] [Dummy-1   ]: Resource report: {"command_name": "run", "command_success": false, "command_wall_clock_time": 3.2660322, "process_in_blocks": "0", "process_kernel_time": 0.83, "process_mem_max_rss": "414160", "process_out_blocks": "0", "process_user_time": 4.57}
+[0m11:53:33.857631 [debug] [Dummy-1   ]: Command `cli run` failed at 11:53:33.857365 after 3.27 seconds
+[0m11:53:33.858245 [debug] [Dummy-1   ]: Flushing usage events

@@ -1,0 +1,12 @@
+
+    
+    
+    truncate table "DBT_TEST"."RAW"."RAW_EVENTS";
+    -- dbt seed --
+    
+            insert into DBT_TEST.raw.raw_events (event_id, customer_id, event_type, event_ts, page, updated_at) values
+            (%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s,%s)
+        
+
+;
+  

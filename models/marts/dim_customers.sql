@@ -53,7 +53,7 @@ final as (
         {{ customer_segment('o.total_spend', 'o.total_orders') }} as segment,
 
         -- Metadata
-        current_timestamp                           as dbt_updated_at
+        current_timestamp()                           as dbt_updated_at
 
     from customers c
     left join order_stats o using (customer_id)
