@@ -258,3 +258,19 @@ Compilation Error in model fct_events_incremental (models/marts/fct_events_incre
 [0m03:36:19.437293 [debug] [Dummy-1   ]: Resource report: {"command_name": "seed", "command_success": false, "command_wall_clock_time": 1.5371715, "process_in_blocks": "0", "process_kernel_time": 0.82, "process_mem_max_rss": "408844", "process_out_blocks": "0", "process_user_time": 4.47}
 [0m03:36:19.437976 [debug] [Dummy-1   ]: Command `cli seed` failed at 03:36:19.437705 after 1.54 seconds
 [0m03:36:19.438600 [debug] [Dummy-1   ]: Flushing usage events
+
+
+============================== 03:41:21.790909 | 8ddb8c80-690d-4aa6-bd55-161f0dc9aae5 ==============================
+[0m03:41:21.790909 [info ] [Dummy-1   ]: Running with dbt=1.10.15
+[0m03:41:21.791809 [debug] [Dummy-1   ]: running dbt with arguments {'log_cache_events': 'False', 'fail_fast': 'False', 'quiet': 'False', 'target_path': '/tmp/dbt/target/', 'log_format': 'default', 'send_anonymous_usage_stats': 'False', 'profiles_dir': '/tmp/dbt/', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'use_experimental_parser': 'False', 'cache_selected_only': 'False', 'use_colors': 'True', 'no_print': 'None', 'empty': 'None', 'partial_parse': 'True', 'warn_error': 'None', 'static_parser': 'True', 'log_path': '/tmp/dbt/logs', 'version_check': 'True', 'introspect': 'True', 'indirect_selection': 'eager', 'printer_width': '80', 'write_json': 'True', 'invocation_command': 'dbt ', 'debug': 'False'}
+[0m03:41:22.033523 [info ] [Dummy-1   ]: Registered adapter: snowflake=1.10.3
+[0m03:41:22.303249 [debug] [Dummy-1   ]: checksum: 0f45fdd67cc51382d6521f874e757e7afa214ac7bb0178b13f1819cbe813499c, vars: {}, profile: , target: dev, version: 1.10.15
+[0m03:41:22.304403 [info ] [Dummy-1   ]: Unable to do partial parsing because saved manifest not found. Starting full parse.
+[0m03:41:23.494841 [error] [Dummy-1   ]: Encountered an error:
+Compilation Error in snapshot snap_customers (snapshots/snap_customers.sql)
+  expected token ',', got 'deleted'
+    line 9
+      invalidate_hard_deletes = true   -- marks deleted rows as expired
+[0m03:41:23.496387 [debug] [Dummy-1   ]: Resource report: {"command_name": "seed", "command_success": false, "command_wall_clock_time": 1.7616894, "process_in_blocks": "0", "process_kernel_time": 0.8, "process_mem_max_rss": "410092", "process_out_blocks": "0", "process_user_time": 4.68}
+[0m03:41:23.497030 [debug] [Dummy-1   ]: Command `cli seed` failed at 03:41:23.496768 after 1.76 seconds
+[0m03:41:23.497588 [debug] [Dummy-1   ]: Flushing usage events
